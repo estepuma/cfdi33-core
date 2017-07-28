@@ -40,7 +40,7 @@ public class ComprobanteTest {
 	private String noCertificado;
 	
 	@Test
-	public void test() {
+	public void comprobanteBasicoTest() {
 		
 		ObjectFactory of = new ObjectFactory();
 		DateTimeCustomBinder dateTimeCustomBinder = new DateTimeCustomBinder();
