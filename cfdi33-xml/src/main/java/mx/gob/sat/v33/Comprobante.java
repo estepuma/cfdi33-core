@@ -5,11 +5,12 @@
 // Generated on: 2017.07.25 at 03:47:03 AM CDT 
 //
 
-
 package mx.gob.sat.v33;
 
 import java.math.BigDecimal;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,13 +19,18 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import mx.gob.sat.v33.adapter.DateAdapter;
+import mx.gob.sat.v33.adapter.RegimenFiscalAdapter;
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -554,3984 +560,3791 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "cfdiRelacionados",
-    "emisor",
-    "receptor",
-    "conceptos",
-    "impuestos",
-    "complemento",
-    "addenda"
-})
+@XmlType(name = "", propOrder = { "cfdiRelacionados", "emisor", "receptor", "conceptos", "impuestos", "complemento",
+		"addenda" })
 @XmlRootElement(name = "Comprobante", namespace = "http://www.sat.gob.mx/cfd/3")
 public class Comprobante {
 
-    @XmlElement(name = "CfdiRelacionados", namespace = "http://www.sat.gob.mx/cfd/3")
-    protected Comprobante.CfdiRelacionados cfdiRelacionados;
-    @XmlElement(name = "Emisor", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-    protected Comprobante.Emisor emisor;
-    @XmlElement(name = "Receptor", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-    protected Comprobante.Receptor receptor;
-    @XmlElement(name = "Conceptos", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-    protected Comprobante.Conceptos conceptos;
-    @XmlElement(name = "Impuestos", namespace = "http://www.sat.gob.mx/cfd/3")
-    protected Comprobante.Impuestos impuestos;
-    @XmlElement(name = "Complemento", namespace = "http://www.sat.gob.mx/cfd/3")
-    protected List<Comprobante.Complemento> complemento;
-    @XmlElement(name = "Addenda", namespace = "http://www.sat.gob.mx/cfd/3")
-    protected Comprobante.Addenda addenda;
-    @XmlAttribute(name = "Version", required = true)
-    protected String version;
-    @XmlAttribute(name = "Serie")
-    protected String serie;
-    @XmlAttribute(name = "Folio")
-    protected String folio;
-    @XmlAttribute(name = "Fecha", required = true)
-    protected XMLGregorianCalendar fecha;
-    @XmlAttribute(name = "Sello", required = true)
-    protected String sello;
-    @XmlAttribute(name = "FormaPago")
-    protected CFormaPago formaPago;
-    @XmlAttribute(name = "NoCertificado", required = true)
-    protected String noCertificado;
-    @XmlAttribute(name = "Certificado", required = true)
-    protected String certificado;
-    @XmlAttribute(name = "CondicionesDePago")
-    protected String condicionesDePago;
-    @XmlAttribute(name = "SubTotal", required = true)
-    protected BigDecimal subTotal;
-    @XmlAttribute(name = "Descuento")
-    protected BigDecimal descuento;
-    @XmlAttribute(name = "Moneda", required = true)
-    protected CMoneda moneda;
-    @XmlAttribute(name = "TipoCambio")
-    protected BigDecimal tipoCambio;
-    @XmlAttribute(name = "Total", required = true)
-    protected BigDecimal total;
-    @XmlAttribute(name = "TipoDeComprobante", required = true)
-    protected CTipoDeComprobante tipoDeComprobante;
-    @XmlAttribute(name = "MetodoPago")
-    protected CMetodoPago metodoPago;
-    @XmlAttribute(name = "LugarExpedicion", required = true)
-    protected String lugarExpedicion;
-    @XmlAttribute(name = "Confirmacion")
-    protected String confirmacion;
-
-    /**
-     * Gets the value of the cfdiRelacionados property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Comprobante.CfdiRelacionados }
-     *     
-     */
-    public Comprobante.CfdiRelacionados getCfdiRelacionados() {
-        return cfdiRelacionados;
-    }
-
-    /**
-     * Sets the value of the cfdiRelacionados property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Comprobante.CfdiRelacionados }
-     *     
-     */
-    public void setCfdiRelacionados(Comprobante.CfdiRelacionados value) {
-        this.cfdiRelacionados = value;
-    }
-
-    /**
-     * Gets the value of the emisor property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Comprobante.Emisor }
-     *     
-     */
-    public Comprobante.Emisor getEmisor() {
-        return emisor;
-    }
-
-    /**
-     * Sets the value of the emisor property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Comprobante.Emisor }
-     *     
-     */
-    public void setEmisor(Comprobante.Emisor value) {
-        this.emisor = value;
-    }
-
-    /**
-     * Gets the value of the receptor property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Comprobante.Receptor }
-     *     
-     */
-    public Comprobante.Receptor getReceptor() {
-        return receptor;
-    }
-
-    /**
-     * Sets the value of the receptor property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Comprobante.Receptor }
-     *     
-     */
-    public void setReceptor(Comprobante.Receptor value) {
-        this.receptor = value;
-    }
-
-    /**
-     * Gets the value of the conceptos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Comprobante.Conceptos }
-     *     
-     */
-    public Comprobante.Conceptos getConceptos() {
-        return conceptos;
-    }
-
-    /**
-     * Sets the value of the conceptos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Comprobante.Conceptos }
-     *     
-     */
-    public void setConceptos(Comprobante.Conceptos value) {
-        this.conceptos = value;
-    }
-
-    /**
-     * Gets the value of the impuestos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Comprobante.Impuestos }
-     *     
-     */
-    public Comprobante.Impuestos getImpuestos() {
-        return impuestos;
-    }
-
-    /**
-     * Sets the value of the impuestos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Comprobante.Impuestos }
-     *     
-     */
-    public void setImpuestos(Comprobante.Impuestos value) {
-        this.impuestos = value;
-    }
-
-    /**
-     * Gets the value of the complemento property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the complemento property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getComplemento().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Comprobante.Complemento }
-     * 
-     * 
-     */
-    public List<Comprobante.Complemento> getComplemento() {
-        if (complemento == null) {
-            complemento = new ArrayList<Comprobante.Complemento>();
-        }
-        return this.complemento;
-    }
-
-    /**
-     * Gets the value of the addenda property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Comprobante.Addenda }
-     *     
-     */
-    public Comprobante.Addenda getAddenda() {
-        return addenda;
-    }
-
-    /**
-     * Sets the value of the addenda property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Comprobante.Addenda }
-     *     
-     */
-    public void setAddenda(Comprobante.Addenda value) {
-        this.addenda = value;
-    }
-
-    /**
-     * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getVersion() {
-        if (version == null) {
-            return "3.3";
-        } else {
-            return version;
-        }
-    }
-
-    /**
-     * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setVersion(String value) {
-        this.version = value;
-    }
-
-    /**
-     * Gets the value of the serie property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSerie() {
-        return serie;
-    }
-
-    /**
-     * Sets the value of the serie property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSerie(String value) {
-        this.serie = value;
-    }
-
-    /**
-     * Gets the value of the folio property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFolio() {
-        return folio;
-    }
-
-    /**
-     * Sets the value of the folio property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFolio(String value) {
-        this.folio = value;
-    }
-
-    /**
-     * Gets the value of the fecha property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getFecha() {
-        return fecha;
-    }
-
-    /**
-     * Sets the value of the fecha property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setFecha(XMLGregorianCalendar value) {
-        this.fecha = value;
-    }
-
-    /**
-     * Gets the value of the sello property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSello() {
-        return sello;
-    }
-
-    /**
-     * Sets the value of the sello property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSello(String value) {
-        this.sello = value;
-    }
-
-    /**
-     * Gets the value of the formaPago property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public CFormaPago getFormaPago() {
-        return formaPago;
-    }
-
-    /**
-     * Sets the value of the formaPago property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFormaPago(CFormaPago value) {
-        this.formaPago = value;
-    }
-
-    /**
-     * Gets the value of the noCertificado property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNoCertificado() {
-        return noCertificado;
-    }
-
-    /**
-     * Sets the value of the noCertificado property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNoCertificado(String value) {
-        this.noCertificado = value;
-    }
-
-    /**
-     * Gets the value of the certificado property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCertificado() {
-        return certificado;
-    }
-
-    /**
-     * Sets the value of the certificado property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCertificado(String value) {
-        this.certificado = value;
-    }
-
-    /**
-     * Gets the value of the condicionesDePago property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCondicionesDePago() {
-        return condicionesDePago;
-    }
-
-    /**
-     * Sets the value of the condicionesDePago property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCondicionesDePago(String value) {
-        this.condicionesDePago = value;
-    }
-
-    /**
-     * Gets the value of the subTotal property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getSubTotal() {
-        return subTotal;
-    }
-
-    /**
-     * Sets the value of the subTotal property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setSubTotal(BigDecimal value) {
-        this.subTotal = value;
-    }
-
-    /**
-     * Gets the value of the descuento property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getDescuento() {
-        return descuento;
-    }
-
-    /**
-     * Sets the value of the descuento property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setDescuento(BigDecimal value) {
-        this.descuento = value;
-    }
-
-    /**
-     * Gets the value of the moneda property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CMoneda }
-     *     
-     */
-    public CMoneda getMoneda() {
-        return moneda;
-    }
-
-    /**
-     * Sets the value of the moneda property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CMoneda }
-     *     
-     */
-    public void setMoneda(CMoneda value) {
-        this.moneda = value;
-    }
-
-    /**
-     * Gets the value of the tipoCambio property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getTipoCambio() {
-        return tipoCambio;
-    }
-
-    /**
-     * Sets the value of the tipoCambio property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setTipoCambio(BigDecimal value) {
-        this.tipoCambio = value;
-    }
-
-    /**
-     * Gets the value of the total property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    /**
-     * Sets the value of the total property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setTotal(BigDecimal value) {
-        this.total = value;
-    }
-
-    /**
-     * Gets the value of the tipoDeComprobante property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CTipoDeComprobante }
-     *     
-     */
-    public CTipoDeComprobante getTipoDeComprobante() {
-        return tipoDeComprobante;
-    }
-
-    /**
-     * Sets the value of the tipoDeComprobante property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CTipoDeComprobante }
-     *     
-     */
-    public void setTipoDeComprobante(CTipoDeComprobante value) {
-        this.tipoDeComprobante = value;
-    }
-
-    /**
-     * Gets the value of the metodoPago property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CMetodoPago }
-     *     
-     */
-    public CMetodoPago getMetodoPago() {
-        return metodoPago;
-    }
-
-    /**
-     * Sets the value of the metodoPago property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CMetodoPago }
-     *     
-     */
-    public void setMetodoPago(CMetodoPago value) {
-        this.metodoPago = value;
-    }
-
-    /**
-     * Gets the value of the lugarExpedicion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLugarExpedicion() {
-        return lugarExpedicion;
-    }
-
-    /**
-     * Sets the value of the lugarExpedicion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLugarExpedicion(String value) {
-        this.lugarExpedicion = value;
-    }
-
-    /**
-     * Gets the value of the confirmacion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getConfirmacion() {
-        return confirmacion;
-    }
-
-    /**
-     * Sets the value of the confirmacion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setConfirmacion(String value) {
-        this.confirmacion = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;any maxOccurs="unbounded"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "any"
-    })
-    public static class Addenda {
-
-        @XmlAnyElement(lax = true)
-        protected List<Object> any;
-
-        /**
-         * Gets the value of the any property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the any property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getAny().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Object }
-         * 
-         * 
-         */
-        public List<Object> getAny() {
-            if (any == null) {
-                any = new ArrayList<Object>();
-            }
-            return this.any;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="CfdiRelacionado" maxOccurs="unbounded"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;attribute name="UUID" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                       &lt;length value="36"/&gt;
-     *                       &lt;whiteSpace value="collapse"/&gt;
-     *                       &lt;pattern value="[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attribute name="TipoRelacion" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "cfdiRelacionado"
-    })
-    public static class CfdiRelacionados {
-
-        @XmlElement(name = "CfdiRelacionado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-        protected List<Comprobante.CfdiRelacionados.CfdiRelacionado> cfdiRelacionado;
-        @XmlAttribute(name = "TipoRelacion", required = true)
-        protected CTipoRelacion tipoRelacion;
-
-        /**
-         * Gets the value of the cfdiRelacionado property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the cfdiRelacionado property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getCfdiRelacionado().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Comprobante.CfdiRelacionados.CfdiRelacionado }
-         * 
-         * 
-         */
-        public List<Comprobante.CfdiRelacionados.CfdiRelacionado> getCfdiRelacionado() {
-            if (cfdiRelacionado == null) {
-                cfdiRelacionado = new ArrayList<Comprobante.CfdiRelacionados.CfdiRelacionado>();
-            }
-            return this.cfdiRelacionado;
-        }
-
-        /**
-         * Gets the value of the tipoRelacion property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public CTipoRelacion getTipoRelacion() {
-            return tipoRelacion;
-        }
-
-        /**
-         * Sets the value of the tipoRelacion property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setTipoRelacion(CTipoRelacion value) {
-            this.tipoRelacion = value;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;attribute name="UUID" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *             &lt;length value="36"/&gt;
-         *             &lt;whiteSpace value="collapse"/&gt;
-         *             &lt;pattern value="[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "")
-        public static class CfdiRelacionado {
-
-            @XmlAttribute(name = "UUID", required = true)
-            protected String uuid;
-
-            /**
-             * Gets the value of the uuid property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getUUID() {
-                return uuid;
-            }
-
-            /**
-             * Sets the value of the uuid property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setUUID(String value) {
-                this.uuid = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;any maxOccurs="unbounded" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "any"
-    })
-    public static class Complemento {
-
-        @XmlAnyElement(lax = true)
-        protected List<Object> any;
-
-        /**
-         * Gets the value of the any property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the any property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getAny().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Object }
-         * 
-         * 
-         */
-        public List<Object> getAny() {
-            if (any == null) {
-                any = new ArrayList<Object>();
-            }
-            return this.any;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="Concepto" maxOccurs="unbounded"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="Impuestos" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;element name="Traslados" minOccurs="0"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;sequence&gt;
-     *                                       &lt;element name="Traslado" maxOccurs="unbounded"&gt;
-     *                                         &lt;complexType&gt;
-     *                                           &lt;complexContent&gt;
-     *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                               &lt;attribute name="Base" use="required"&gt;
-     *                                                 &lt;simpleType&gt;
-     *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                                     &lt;fractionDigits value="6"/&gt;
-     *                                                     &lt;minInclusive value="0.000001"/&gt;
-     *                                                     &lt;whiteSpace value="collapse"/&gt;
-     *                                                   &lt;/restriction&gt;
-     *                                                 &lt;/simpleType&gt;
-     *                                               &lt;/attribute&gt;
-     *                                               &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-     *                                               &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-     *                                               &lt;attribute name="TasaOCuota"&gt;
-     *                                                 &lt;simpleType&gt;
-     *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                                     &lt;fractionDigits value="6"/&gt;
-     *                                                     &lt;minInclusive value="0.000000"/&gt;
-     *                                                     &lt;whiteSpace value="collapse"/&gt;
-     *                                                   &lt;/restriction&gt;
-     *                                                 &lt;/simpleType&gt;
-     *                                               &lt;/attribute&gt;
-     *                                               &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                                             &lt;/restriction&gt;
-     *                                           &lt;/complexContent&gt;
-     *                                         &lt;/complexType&gt;
-     *                                       &lt;/element&gt;
-     *                                     &lt;/sequence&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                             &lt;element name="Retenciones" minOccurs="0"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;sequence&gt;
-     *                                       &lt;element name="Retencion" maxOccurs="unbounded"&gt;
-     *                                         &lt;complexType&gt;
-     *                                           &lt;complexContent&gt;
-     *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                               &lt;attribute name="Base" use="required"&gt;
-     *                                                 &lt;simpleType&gt;
-     *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                                     &lt;fractionDigits value="6"/&gt;
-     *                                                     &lt;minInclusive value="0.000001"/&gt;
-     *                                                     &lt;whiteSpace value="collapse"/&gt;
-     *                                                   &lt;/restriction&gt;
-     *                                                 &lt;/simpleType&gt;
-     *                                               &lt;/attribute&gt;
-     *                                               &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-     *                                               &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-     *                                               &lt;attribute name="TasaOCuota" use="required"&gt;
-     *                                                 &lt;simpleType&gt;
-     *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                                     &lt;whiteSpace value="collapse"/&gt;
-     *                                                     &lt;minInclusive value="0.000000"/&gt;
-     *                                                     &lt;fractionDigits value="6"/&gt;
-     *                                                   &lt;/restriction&gt;
-     *                                                 &lt;/simpleType&gt;
-     *                                               &lt;/attribute&gt;
-     *                                               &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                                             &lt;/restriction&gt;
-     *                                           &lt;/complexContent&gt;
-     *                                         &lt;/complexType&gt;
-     *                                       &lt;/element&gt;
-     *                                     &lt;/sequence&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                           &lt;/sequence&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="NumeroPedimento" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;length value="21"/&gt;
-     *                                 &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="CuentaPredial" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="Numero" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;minLength value="1"/&gt;
-     *                                 &lt;maxLength value="150"/&gt;
-     *                                 &lt;whiteSpace value="collapse"/&gt;
-     *                                 &lt;pattern value="[0-9]{1,150}"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="ComplementoConcepto" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;any maxOccurs="unbounded"/&gt;
-     *                           &lt;/sequence&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="Parte" maxOccurs="unbounded" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;attribute name="NumeroPedimento" use="required"&gt;
-     *                                       &lt;simpleType&gt;
-     *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                           &lt;length value="21"/&gt;
-     *                                           &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-     *                                         &lt;/restriction&gt;
-     *                                       &lt;/simpleType&gt;
-     *                                     &lt;/attribute&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                           &lt;/sequence&gt;
-     *                           &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
-     *                           &lt;attribute name="NoIdentificacion"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;minLength value="1"/&gt;
-     *                                 &lt;maxLength value="100"/&gt;
-     *                                 &lt;whiteSpace value="collapse"/&gt;
-     *                                 &lt;pattern value="[^|]{1,100}"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="Cantidad" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                 &lt;fractionDigits value="6"/&gt;
-     *                                 &lt;minInclusive value="0.000001"/&gt;
-     *                                 &lt;whiteSpace value="collapse"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="Unidad"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;minLength value="1"/&gt;
-     *                                 &lt;maxLength value="20"/&gt;
-     *                                 &lt;whiteSpace value="collapse"/&gt;
-     *                                 &lt;pattern value="[^|]{1,20}"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="Descripcion" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;minLength value="1"/&gt;
-     *                                 &lt;maxLength value="1000"/&gt;
-     *                                 &lt;whiteSpace value="collapse"/&gt;
-     *                                 &lt;pattern value="[^|]{1,1000}"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="ValorUnitario" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                           &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *                 &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
-     *                 &lt;attribute name="NoIdentificacion"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                       &lt;whiteSpace value="collapse"/&gt;
-     *                       &lt;minLength value="1"/&gt;
-     *                       &lt;maxLength value="100"/&gt;
-     *                       &lt;pattern value="[^|]{1,100}"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="Cantidad" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                       &lt;fractionDigits value="6"/&gt;
-     *                       &lt;minInclusive value="0.000001"/&gt;
-     *                       &lt;whiteSpace value="collapse"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="ClaveUnidad" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveUnidad" /&gt;
-     *                 &lt;attribute name="Unidad"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                       &lt;minLength value="1"/&gt;
-     *                       &lt;maxLength value="20"/&gt;
-     *                       &lt;whiteSpace value="collapse"/&gt;
-     *                       &lt;pattern value="[^|]{1,20}"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="Descripcion" use="required"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                       &lt;minLength value="1"/&gt;
-     *                       &lt;maxLength value="1000"/&gt;
-     *                       &lt;whiteSpace value="collapse"/&gt;
-     *                       &lt;pattern value="[^|]{1,1000}"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="ValorUnitario" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                 &lt;attribute name="Descuento" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "concepto"
-    })
-    public static class Conceptos {
-
-        @XmlElement(name = "Concepto", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-        protected List<Comprobante.Conceptos.Concepto> concepto;
-
-        /**
-         * Gets the value of the concepto property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the concepto property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getConcepto().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Comprobante.Conceptos.Concepto }
-         * 
-         * 
-         */
-        public List<Comprobante.Conceptos.Concepto> getConcepto() {
-            if (concepto == null) {
-                concepto = new ArrayList<Comprobante.Conceptos.Concepto>();
-            }
-            return this.concepto;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="Impuestos" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;element name="Traslados" minOccurs="0"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;sequence&gt;
-         *                             &lt;element name="Traslado" maxOccurs="unbounded"&gt;
-         *                               &lt;complexType&gt;
-         *                                 &lt;complexContent&gt;
-         *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                                     &lt;attribute name="Base" use="required"&gt;
-         *                                       &lt;simpleType&gt;
-         *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                                           &lt;fractionDigits value="6"/&gt;
-         *                                           &lt;minInclusive value="0.000001"/&gt;
-         *                                           &lt;whiteSpace value="collapse"/&gt;
-         *                                         &lt;/restriction&gt;
-         *                                       &lt;/simpleType&gt;
-         *                                     &lt;/attribute&gt;
-         *                                     &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-         *                                     &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-         *                                     &lt;attribute name="TasaOCuota"&gt;
-         *                                       &lt;simpleType&gt;
-         *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                                           &lt;fractionDigits value="6"/&gt;
-         *                                           &lt;minInclusive value="0.000000"/&gt;
-         *                                           &lt;whiteSpace value="collapse"/&gt;
-         *                                         &lt;/restriction&gt;
-         *                                       &lt;/simpleType&gt;
-         *                                     &lt;/attribute&gt;
-         *                                     &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *                                   &lt;/restriction&gt;
-         *                                 &lt;/complexContent&gt;
-         *                               &lt;/complexType&gt;
-         *                             &lt;/element&gt;
-         *                           &lt;/sequence&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                   &lt;element name="Retenciones" minOccurs="0"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;sequence&gt;
-         *                             &lt;element name="Retencion" maxOccurs="unbounded"&gt;
-         *                               &lt;complexType&gt;
-         *                                 &lt;complexContent&gt;
-         *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                                     &lt;attribute name="Base" use="required"&gt;
-         *                                       &lt;simpleType&gt;
-         *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                                           &lt;fractionDigits value="6"/&gt;
-         *                                           &lt;minInclusive value="0.000001"/&gt;
-         *                                           &lt;whiteSpace value="collapse"/&gt;
-         *                                         &lt;/restriction&gt;
-         *                                       &lt;/simpleType&gt;
-         *                                     &lt;/attribute&gt;
-         *                                     &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-         *                                     &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-         *                                     &lt;attribute name="TasaOCuota" use="required"&gt;
-         *                                       &lt;simpleType&gt;
-         *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                                           &lt;whiteSpace value="collapse"/&gt;
-         *                                           &lt;minInclusive value="0.000000"/&gt;
-         *                                           &lt;fractionDigits value="6"/&gt;
-         *                                         &lt;/restriction&gt;
-         *                                       &lt;/simpleType&gt;
-         *                                     &lt;/attribute&gt;
-         *                                     &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *                                   &lt;/restriction&gt;
-         *                                 &lt;/complexContent&gt;
-         *                               &lt;/complexType&gt;
-         *                             &lt;/element&gt;
-         *                           &lt;/sequence&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                 &lt;/sequence&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="NumeroPedimento" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;length value="21"/&gt;
-         *                       &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="CuentaPredial" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="Numero" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;minLength value="1"/&gt;
-         *                       &lt;maxLength value="150"/&gt;
-         *                       &lt;whiteSpace value="collapse"/&gt;
-         *                       &lt;pattern value="[0-9]{1,150}"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="ComplementoConcepto" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;any maxOccurs="unbounded"/&gt;
-         *                 &lt;/sequence&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="Parte" maxOccurs="unbounded" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;attribute name="NumeroPedimento" use="required"&gt;
-         *                             &lt;simpleType&gt;
-         *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                                 &lt;length value="21"/&gt;
-         *                                 &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-         *                               &lt;/restriction&gt;
-         *                             &lt;/simpleType&gt;
-         *                           &lt;/attribute&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                 &lt;/sequence&gt;
-         *                 &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
-         *                 &lt;attribute name="NoIdentificacion"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;minLength value="1"/&gt;
-         *                       &lt;maxLength value="100"/&gt;
-         *                       &lt;whiteSpace value="collapse"/&gt;
-         *                       &lt;pattern value="[^|]{1,100}"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="Cantidad" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                       &lt;fractionDigits value="6"/&gt;
-         *                       &lt;minInclusive value="0.000001"/&gt;
-         *                       &lt;whiteSpace value="collapse"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="Unidad"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;minLength value="1"/&gt;
-         *                       &lt;maxLength value="20"/&gt;
-         *                       &lt;whiteSpace value="collapse"/&gt;
-         *                       &lt;pattern value="[^|]{1,20}"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="Descripcion" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;minLength value="1"/&gt;
-         *                       &lt;maxLength value="1000"/&gt;
-         *                       &lt;whiteSpace value="collapse"/&gt;
-         *                       &lt;pattern value="[^|]{1,1000}"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="ValorUnitario" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *                 &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *       &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
-         *       &lt;attribute name="NoIdentificacion"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *             &lt;whiteSpace value="collapse"/&gt;
-         *             &lt;minLength value="1"/&gt;
-         *             &lt;maxLength value="100"/&gt;
-         *             &lt;pattern value="[^|]{1,100}"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="Cantidad" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *             &lt;fractionDigits value="6"/&gt;
-         *             &lt;minInclusive value="0.000001"/&gt;
-         *             &lt;whiteSpace value="collapse"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="ClaveUnidad" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveUnidad" /&gt;
-         *       &lt;attribute name="Unidad"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *             &lt;minLength value="1"/&gt;
-         *             &lt;maxLength value="20"/&gt;
-         *             &lt;whiteSpace value="collapse"/&gt;
-         *             &lt;pattern value="[^|]{1,20}"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="Descripcion" use="required"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *             &lt;minLength value="1"/&gt;
-         *             &lt;maxLength value="1000"/&gt;
-         *             &lt;whiteSpace value="collapse"/&gt;
-         *             &lt;pattern value="[^|]{1,1000}"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="ValorUnitario" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *       &lt;attribute name="Descuento" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "impuestos",
-            "informacionAduanera",
-            "cuentaPredial",
-            "complementoConcepto",
-            "parte"
-        })
-        public static class Concepto {
-
-            @XmlElement(name = "Impuestos", namespace = "http://www.sat.gob.mx/cfd/3")
-            protected Comprobante.Conceptos.Concepto.Impuestos impuestos;
-            @XmlElement(name = "InformacionAduanera", namespace = "http://www.sat.gob.mx/cfd/3")
-            protected List<Comprobante.Conceptos.Concepto.InformacionAduanera> informacionAduanera;
-            @XmlElement(name = "CuentaPredial", namespace = "http://www.sat.gob.mx/cfd/3")
-            protected Comprobante.Conceptos.Concepto.CuentaPredial cuentaPredial;
-            @XmlElement(name = "ComplementoConcepto", namespace = "http://www.sat.gob.mx/cfd/3")
-            protected Comprobante.Conceptos.Concepto.ComplementoConcepto complementoConcepto;
-            @XmlElement(name = "Parte", namespace = "http://www.sat.gob.mx/cfd/3")
-            protected List<Comprobante.Conceptos.Concepto.Parte> parte;
-            @XmlAttribute(name = "ClaveProdServ", required = true)
-            protected String claveProdServ;
-            @XmlAttribute(name = "NoIdentificacion")
-            protected String noIdentificacion;
-            @XmlAttribute(name = "Cantidad", required = true)
-            protected BigDecimal cantidad;
-            @XmlAttribute(name = "ClaveUnidad", required = true)
-            protected CClaveUnidad claveUnidad;
-            @XmlAttribute(name = "Unidad")
-            protected String unidad;
-            @XmlAttribute(name = "Descripcion", required = true)
-            protected String descripcion;
-            @XmlAttribute(name = "ValorUnitario", required = true)
-            protected BigDecimal valorUnitario;
-            @XmlAttribute(name = "Importe", required = true)
-            protected BigDecimal importe;
-            @XmlAttribute(name = "Descuento")
-            protected BigDecimal descuento;
-
-            /**
-             * Gets the value of the impuestos property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Comprobante.Conceptos.Concepto.Impuestos }
-             *     
-             */
-            public Comprobante.Conceptos.Concepto.Impuestos getImpuestos() {
-                return impuestos;
-            }
-
-            /**
-             * Sets the value of the impuestos property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Comprobante.Conceptos.Concepto.Impuestos }
-             *     
-             */
-            public void setImpuestos(Comprobante.Conceptos.Concepto.Impuestos value) {
-                this.impuestos = value;
-            }
-
-            /**
-             * Gets the value of the informacionAduanera property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the informacionAduanera property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getInformacionAduanera().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link Comprobante.Conceptos.Concepto.InformacionAduanera }
-             * 
-             * 
-             */
-            public List<Comprobante.Conceptos.Concepto.InformacionAduanera> getInformacionAduanera() {
-                if (informacionAduanera == null) {
-                    informacionAduanera = new ArrayList<Comprobante.Conceptos.Concepto.InformacionAduanera>();
-                }
-                return this.informacionAduanera;
-            }
-
-            /**
-             * Gets the value of the cuentaPredial property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Comprobante.Conceptos.Concepto.CuentaPredial }
-             *     
-             */
-            public Comprobante.Conceptos.Concepto.CuentaPredial getCuentaPredial() {
-                return cuentaPredial;
-            }
-
-            /**
-             * Sets the value of the cuentaPredial property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Comprobante.Conceptos.Concepto.CuentaPredial }
-             *     
-             */
-            public void setCuentaPredial(Comprobante.Conceptos.Concepto.CuentaPredial value) {
-                this.cuentaPredial = value;
-            }
-
-            /**
-             * Gets the value of the complementoConcepto property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Comprobante.Conceptos.Concepto.ComplementoConcepto }
-             *     
-             */
-            public Comprobante.Conceptos.Concepto.ComplementoConcepto getComplementoConcepto() {
-                return complementoConcepto;
-            }
-
-            /**
-             * Sets the value of the complementoConcepto property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Comprobante.Conceptos.Concepto.ComplementoConcepto }
-             *     
-             */
-            public void setComplementoConcepto(Comprobante.Conceptos.Concepto.ComplementoConcepto value) {
-                this.complementoConcepto = value;
-            }
-
-            /**
-             * Gets the value of the parte property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the parte property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getParte().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link Comprobante.Conceptos.Concepto.Parte }
-             * 
-             * 
-             */
-            public List<Comprobante.Conceptos.Concepto.Parte> getParte() {
-                if (parte == null) {
-                    parte = new ArrayList<Comprobante.Conceptos.Concepto.Parte>();
-                }
-                return this.parte;
-            }
-
-            /**
-             * Gets the value of the claveProdServ property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getClaveProdServ() {
-                return claveProdServ;
-            }
-
-            /**
-             * Sets the value of the claveProdServ property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setClaveProdServ(String value) {
-                this.claveProdServ = value;
-            }
-
-            /**
-             * Gets the value of the noIdentificacion property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getNoIdentificacion() {
-                return noIdentificacion;
-            }
-
-            /**
-             * Sets the value of the noIdentificacion property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setNoIdentificacion(String value) {
-                this.noIdentificacion = value;
-            }
-
-            /**
-             * Gets the value of the cantidad property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public BigDecimal getCantidad() {
-                return cantidad;
-            }
-
-            /**
-             * Sets the value of the cantidad property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public void setCantidad(BigDecimal value) {
-                this.cantidad = value;
-            }
-
-            /**
-             * Gets the value of the claveUnidad property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public CClaveUnidad getClaveUnidad() {
-                return claveUnidad;
-            }
-
-            /**
-             * Sets the value of the claveUnidad property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setClaveUnidad(CClaveUnidad value) {
-                this.claveUnidad = value;
-            }
-
-            /**
-             * Gets the value of the unidad property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getUnidad() {
-                return unidad;
-            }
-
-            /**
-             * Sets the value of the unidad property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setUnidad(String value) {
-                this.unidad = value;
-            }
-
-            /**
-             * Gets the value of the descripcion property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getDescripcion() {
-                return descripcion;
-            }
-
-            /**
-             * Sets the value of the descripcion property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setDescripcion(String value) {
-                this.descripcion = value;
-            }
-
-            /**
-             * Gets the value of the valorUnitario property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public BigDecimal getValorUnitario() {
-                return valorUnitario;
-            }
-
-            /**
-             * Sets the value of the valorUnitario property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public void setValorUnitario(BigDecimal value) {
-                this.valorUnitario = value;
-            }
-
-            /**
-             * Gets the value of the importe property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public BigDecimal getImporte() {
-                return importe;
-            }
-
-            /**
-             * Sets the value of the importe property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public void setImporte(BigDecimal value) {
-                this.importe = value;
-            }
-
-            /**
-             * Gets the value of the descuento property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public BigDecimal getDescuento() {
-                return descuento;
-            }
-
-            /**
-             * Sets the value of the descuento property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
-             */
-            public void setDescuento(BigDecimal value) {
-                this.descuento = value;
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;any maxOccurs="unbounded"/&gt;
-             *       &lt;/sequence&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "", propOrder = {
-                "any"
-            })
-            public static class ComplementoConcepto {
-
-                @XmlAnyElement(lax = true)
-                protected List<Object> any;
-
-                /**
-                 * Gets the value of the any property.
-                 * 
-                 * <p>
-                 * This accessor method returns a reference to the live list,
-                 * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the any property.
-                 * 
-                 * <p>
-                 * For example, to add a new item, do as follows:
-                 * <pre>
-                 *    getAny().add(newItem);
-                 * </pre>
-                 * 
-                 * 
-                 * <p>
-                 * Objects of the following type(s) are allowed in the list
-                 * {@link Object }
-                 * 
-                 * 
-                 */
-                public List<Object> getAny() {
-                    if (any == null) {
-                        any = new ArrayList<Object>();
-                    }
-                    return this.any;
-                }
-
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="Numero" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;minLength value="1"/&gt;
-             *             &lt;maxLength value="150"/&gt;
-             *             &lt;whiteSpace value="collapse"/&gt;
-             *             &lt;pattern value="[0-9]{1,150}"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "")
-            public static class CuentaPredial {
-
-                @XmlAttribute(name = "Numero", required = true)
-                protected String numero;
-
-                /**
-                 * Gets the value of the numero property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getNumero() {
-                    return numero;
-                }
-
-                /**
-                 * Sets the value of the numero property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setNumero(String value) {
-                    this.numero = value;
-                }
-
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;element name="Traslados" minOccurs="0"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;sequence&gt;
-             *                   &lt;element name="Traslado" maxOccurs="unbounded"&gt;
-             *                     &lt;complexType&gt;
-             *                       &lt;complexContent&gt;
-             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                           &lt;attribute name="Base" use="required"&gt;
-             *                             &lt;simpleType&gt;
-             *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *                                 &lt;fractionDigits value="6"/&gt;
-             *                                 &lt;minInclusive value="0.000001"/&gt;
-             *                                 &lt;whiteSpace value="collapse"/&gt;
-             *                               &lt;/restriction&gt;
-             *                             &lt;/simpleType&gt;
-             *                           &lt;/attribute&gt;
-             *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-             *                           &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-             *                           &lt;attribute name="TasaOCuota"&gt;
-             *                             &lt;simpleType&gt;
-             *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *                                 &lt;fractionDigits value="6"/&gt;
-             *                                 &lt;minInclusive value="0.000000"/&gt;
-             *                                 &lt;whiteSpace value="collapse"/&gt;
-             *                               &lt;/restriction&gt;
-             *                             &lt;/simpleType&gt;
-             *                           &lt;/attribute&gt;
-             *                           &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-             *                         &lt;/restriction&gt;
-             *                       &lt;/complexContent&gt;
-             *                     &lt;/complexType&gt;
-             *                   &lt;/element&gt;
-             *                 &lt;/sequence&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *         &lt;element name="Retenciones" minOccurs="0"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;sequence&gt;
-             *                   &lt;element name="Retencion" maxOccurs="unbounded"&gt;
-             *                     &lt;complexType&gt;
-             *                       &lt;complexContent&gt;
-             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                           &lt;attribute name="Base" use="required"&gt;
-             *                             &lt;simpleType&gt;
-             *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *                                 &lt;fractionDigits value="6"/&gt;
-             *                                 &lt;minInclusive value="0.000001"/&gt;
-             *                                 &lt;whiteSpace value="collapse"/&gt;
-             *                               &lt;/restriction&gt;
-             *                             &lt;/simpleType&gt;
-             *                           &lt;/attribute&gt;
-             *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-             *                           &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-             *                           &lt;attribute name="TasaOCuota" use="required"&gt;
-             *                             &lt;simpleType&gt;
-             *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *                                 &lt;whiteSpace value="collapse"/&gt;
-             *                                 &lt;minInclusive value="0.000000"/&gt;
-             *                                 &lt;fractionDigits value="6"/&gt;
-             *                               &lt;/restriction&gt;
-             *                             &lt;/simpleType&gt;
-             *                           &lt;/attribute&gt;
-             *                           &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-             *                         &lt;/restriction&gt;
-             *                       &lt;/complexContent&gt;
-             *                     &lt;/complexType&gt;
-             *                   &lt;/element&gt;
-             *                 &lt;/sequence&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *       &lt;/sequence&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "", propOrder = {
-                "traslados",
-                "retenciones"
-            })
-            public static class Impuestos {
-
-                @XmlElement(name = "Traslados", namespace = "http://www.sat.gob.mx/cfd/3")
-                protected Comprobante.Conceptos.Concepto.Impuestos.Traslados traslados;
-                @XmlElement(name = "Retenciones", namespace = "http://www.sat.gob.mx/cfd/3")
-                protected Comprobante.Conceptos.Concepto.Impuestos.Retenciones retenciones;
-
-                /**
-                 * Gets the value of the traslados property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link Comprobante.Conceptos.Concepto.Impuestos.Traslados }
-                 *     
-                 */
-                public Comprobante.Conceptos.Concepto.Impuestos.Traslados getTraslados() {
-                    return traslados;
-                }
-
-                /**
-                 * Sets the value of the traslados property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link Comprobante.Conceptos.Concepto.Impuestos.Traslados }
-                 *     
-                 */
-                public void setTraslados(Comprobante.Conceptos.Concepto.Impuestos.Traslados value) {
-                    this.traslados = value;
-                }
-
-                /**
-                 * Gets the value of the retenciones property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link Comprobante.Conceptos.Concepto.Impuestos.Retenciones }
-                 *     
-                 */
-                public Comprobante.Conceptos.Concepto.Impuestos.Retenciones getRetenciones() {
-                    return retenciones;
-                }
-
-                /**
-                 * Sets the value of the retenciones property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link Comprobante.Conceptos.Concepto.Impuestos.Retenciones }
-                 *     
-                 */
-                public void setRetenciones(Comprobante.Conceptos.Concepto.Impuestos.Retenciones value) {
-                    this.retenciones = value;
-                }
-
-
-                /**
-                 * <p>Java class for anonymous complex type.
-                 * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
-                 * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;sequence&gt;
-                 *         &lt;element name="Retencion" maxOccurs="unbounded"&gt;
-                 *           &lt;complexType&gt;
-                 *             &lt;complexContent&gt;
-                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *                 &lt;attribute name="Base" use="required"&gt;
-                 *                   &lt;simpleType&gt;
-                 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                 *                       &lt;fractionDigits value="6"/&gt;
-                 *                       &lt;minInclusive value="0.000001"/&gt;
-                 *                       &lt;whiteSpace value="collapse"/&gt;
-                 *                     &lt;/restriction&gt;
-                 *                   &lt;/simpleType&gt;
-                 *                 &lt;/attribute&gt;
-                 *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-                 *                 &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-                 *                 &lt;attribute name="TasaOCuota" use="required"&gt;
-                 *                   &lt;simpleType&gt;
-                 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                 *                       &lt;whiteSpace value="collapse"/&gt;
-                 *                       &lt;minInclusive value="0.000000"/&gt;
-                 *                       &lt;fractionDigits value="6"/&gt;
-                 *                     &lt;/restriction&gt;
-                 *                   &lt;/simpleType&gt;
-                 *                 &lt;/attribute&gt;
-                 *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-                 *               &lt;/restriction&gt;
-                 *             &lt;/complexContent&gt;
-                 *           &lt;/complexType&gt;
-                 *         &lt;/element&gt;
-                 *       &lt;/sequence&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
-                 * </pre>
-                 * 
-                 * 
-                 */
-                @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = {
-                    "retencion"
-                })
-                public static class Retenciones {
-
-                    @XmlElement(name = "Retencion", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-                    protected List<Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion> retencion;
-
-                    /**
-                     * Gets the value of the retencion property.
-                     * 
-                     * <p>
-                     * This accessor method returns a reference to the live list,
-                     * not a snapshot. Therefore any modification you make to the
-                     * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the retencion property.
-                     * 
-                     * <p>
-                     * For example, to add a new item, do as follows:
-                     * <pre>
-                     *    getRetencion().add(newItem);
-                     * </pre>
-                     * 
-                     * 
-                     * <p>
-                     * Objects of the following type(s) are allowed in the list
-                     * {@link Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion }
-                     * 
-                     * 
-                     */
-                    public List<Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion> getRetencion() {
-                        if (retencion == null) {
-                            retencion = new ArrayList<Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion>();
-                        }
-                        return this.retencion;
-                    }
-
-
-                    /**
-                     * <p>Java class for anonymous complex type.
-                     * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
-                     * 
-                     * <pre>
-                     * &lt;complexType&gt;
-                     *   &lt;complexContent&gt;
-                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                     *       &lt;attribute name="Base" use="required"&gt;
-                     *         &lt;simpleType&gt;
-                     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                     *             &lt;fractionDigits value="6"/&gt;
-                     *             &lt;minInclusive value="0.000001"/&gt;
-                     *             &lt;whiteSpace value="collapse"/&gt;
-                     *           &lt;/restriction&gt;
-                     *         &lt;/simpleType&gt;
-                     *       &lt;/attribute&gt;
-                     *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-                     *       &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-                     *       &lt;attribute name="TasaOCuota" use="required"&gt;
-                     *         &lt;simpleType&gt;
-                     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                     *             &lt;whiteSpace value="collapse"/&gt;
-                     *             &lt;minInclusive value="0.000000"/&gt;
-                     *             &lt;fractionDigits value="6"/&gt;
-                     *           &lt;/restriction&gt;
-                     *         &lt;/simpleType&gt;
-                     *       &lt;/attribute&gt;
-                     *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-                     *     &lt;/restriction&gt;
-                     *   &lt;/complexContent&gt;
-                     * &lt;/complexType&gt;
-                     * </pre>
-                     * 
-                     * 
-                     */
-                    @XmlAccessorType(XmlAccessType.FIELD)
-                    @XmlType(name = "")
-                    public static class Retencion {
-
-                        @XmlAttribute(name = "Base", required = true)
-                        protected BigDecimal base;
-                        @XmlAttribute(name = "Impuesto", required = true)
-                        protected CImpuesto impuesto;
-                        @XmlAttribute(name = "TipoFactor", required = true)
-                        protected CTipoFactor tipoFactor;
-                        @XmlAttribute(name = "TasaOCuota", required = true)
-                        protected BigDecimal tasaOCuota;
-                        @XmlAttribute(name = "Importe", required = true)
-                        protected BigDecimal importe;
-
-                        /**
-                         * Gets the value of the base property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public BigDecimal getBase() {
-                            return base;
-                        }
-
-                        /**
-                         * Sets the value of the base property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public void setBase(BigDecimal value) {
-                            this.base = value;
-                        }
-
-                        /**
-                         * Gets the value of the impuesto property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
-                         */
-                        public CImpuesto getImpuesto() {
-                            return impuesto;
-                        }
-
-                        /**
-                         * Sets the value of the impuesto property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
-                         */
-                        public void setImpuesto(CImpuesto value) {
-                            this.impuesto = value;
-                        }
-
-                        /**
-                         * Gets the value of the tipoFactor property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link CTipoFactor }
-                         *     
-                         */
-                        public CTipoFactor getTipoFactor() {
-                            return tipoFactor;
-                        }
-
-                        /**
-                         * Sets the value of the tipoFactor property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link CTipoFactor }
-                         *     
-                         */
-                        public void setTipoFactor(CTipoFactor value) {
-                            this.tipoFactor = value;
-                        }
-
-                        /**
-                         * Gets the value of the tasaOCuota property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public BigDecimal getTasaOCuota() {
-                            return tasaOCuota;
-                        }
-
-                        /**
-                         * Sets the value of the tasaOCuota property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public void setTasaOCuota(BigDecimal value) {
-                            this.tasaOCuota = value;
-                        }
-
-                        /**
-                         * Gets the value of the importe property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public BigDecimal getImporte() {
-                            return importe;
-                        }
-
-                        /**
-                         * Sets the value of the importe property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public void setImporte(BigDecimal value) {
-                            this.importe = value;
-                        }
-
-                    }
-
-                }
-
-
-                /**
-                 * <p>Java class for anonymous complex type.
-                 * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
-                 * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;sequence&gt;
-                 *         &lt;element name="Traslado" maxOccurs="unbounded"&gt;
-                 *           &lt;complexType&gt;
-                 *             &lt;complexContent&gt;
-                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *                 &lt;attribute name="Base" use="required"&gt;
-                 *                   &lt;simpleType&gt;
-                 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                 *                       &lt;fractionDigits value="6"/&gt;
-                 *                       &lt;minInclusive value="0.000001"/&gt;
-                 *                       &lt;whiteSpace value="collapse"/&gt;
-                 *                     &lt;/restriction&gt;
-                 *                   &lt;/simpleType&gt;
-                 *                 &lt;/attribute&gt;
-                 *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-                 *                 &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-                 *                 &lt;attribute name="TasaOCuota"&gt;
-                 *                   &lt;simpleType&gt;
-                 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                 *                       &lt;fractionDigits value="6"/&gt;
-                 *                       &lt;minInclusive value="0.000000"/&gt;
-                 *                       &lt;whiteSpace value="collapse"/&gt;
-                 *                     &lt;/restriction&gt;
-                 *                   &lt;/simpleType&gt;
-                 *                 &lt;/attribute&gt;
-                 *                 &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-                 *               &lt;/restriction&gt;
-                 *             &lt;/complexContent&gt;
-                 *           &lt;/complexType&gt;
-                 *         &lt;/element&gt;
-                 *       &lt;/sequence&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
-                 * </pre>
-                 * 
-                 * 
-                 */
-                @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = {
-                    "traslado"
-                })
-                public static class Traslados {
-
-                    @XmlElement(name = "Traslado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-                    protected List<Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado> traslado;
-
-                    /**
-                     * Gets the value of the traslado property.
-                     * 
-                     * <p>
-                     * This accessor method returns a reference to the live list,
-                     * not a snapshot. Therefore any modification you make to the
-                     * returned list will be present inside the JAXB object.
-                     * This is why there is not a <CODE>set</CODE> method for the traslado property.
-                     * 
-                     * <p>
-                     * For example, to add a new item, do as follows:
-                     * <pre>
-                     *    getTraslado().add(newItem);
-                     * </pre>
-                     * 
-                     * 
-                     * <p>
-                     * Objects of the following type(s) are allowed in the list
-                     * {@link Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado }
-                     * 
-                     * 
-                     */
-                    public List<Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado> getTraslado() {
-                        if (traslado == null) {
-                            traslado = new ArrayList<Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado>();
-                        }
-                        return this.traslado;
-                    }
-
-
-                    /**
-                     * <p>Java class for anonymous complex type.
-                     * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
-                     * 
-                     * <pre>
-                     * &lt;complexType&gt;
-                     *   &lt;complexContent&gt;
-                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                     *       &lt;attribute name="Base" use="required"&gt;
-                     *         &lt;simpleType&gt;
-                     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                     *             &lt;fractionDigits value="6"/&gt;
-                     *             &lt;minInclusive value="0.000001"/&gt;
-                     *             &lt;whiteSpace value="collapse"/&gt;
-                     *           &lt;/restriction&gt;
-                     *         &lt;/simpleType&gt;
-                     *       &lt;/attribute&gt;
-                     *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-                     *       &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-                     *       &lt;attribute name="TasaOCuota"&gt;
-                     *         &lt;simpleType&gt;
-                     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-                     *             &lt;fractionDigits value="6"/&gt;
-                     *             &lt;minInclusive value="0.000000"/&gt;
-                     *             &lt;whiteSpace value="collapse"/&gt;
-                     *           &lt;/restriction&gt;
-                     *         &lt;/simpleType&gt;
-                     *       &lt;/attribute&gt;
-                     *       &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-                     *     &lt;/restriction&gt;
-                     *   &lt;/complexContent&gt;
-                     * &lt;/complexType&gt;
-                     * </pre>
-                     * 
-                     * 
-                     */
-                    @XmlAccessorType(XmlAccessType.FIELD)
-                    @XmlType(name = "")
-                    public static class Traslado {
-
-                        @XmlAttribute(name = "Base", required = true)
-                        protected BigDecimal base;
-                        @XmlAttribute(name = "Impuesto", required = true)
-                        protected String impuesto;
-                        @XmlAttribute(name = "TipoFactor", required = true)
-                        protected CTipoFactor tipoFactor;
-                        @XmlAttribute(name = "TasaOCuota")
-                        protected BigDecimal tasaOCuota;
-                        @XmlAttribute(name = "Importe")
-                        protected BigDecimal importe;
-
-                        /**
-                         * Gets the value of the base property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public BigDecimal getBase() {
-                            return base;
-                        }
-
-                        /**
-                         * Sets the value of the base property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public void setBase(BigDecimal value) {
-                            this.base = value;
-                        }
-
-                        /**
-                         * Gets the value of the impuesto property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
-                         */
-                        public String getImpuesto() {
-                            return impuesto;
-                        }
-
-                        /**
-                         * Sets the value of the impuesto property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
-                         */
-                        public void setImpuesto(String value) {
-                            this.impuesto = value;
-                        }
-
-                        /**
-                         * Gets the value of the tipoFactor property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link CTipoFactor }
-                         *     
-                         */
-                        public CTipoFactor getTipoFactor() {
-                            return tipoFactor;
-                        }
-
-                        /**
-                         * Sets the value of the tipoFactor property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link CTipoFactor }
-                         *     
-                         */
-                        public void setTipoFactor(CTipoFactor value) {
-                            this.tipoFactor = value;
-                        }
-
-                        /**
-                         * Gets the value of the tasaOCuota property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public BigDecimal getTasaOCuota() {
-                            return tasaOCuota;
-                        }
-
-                        /**
-                         * Sets the value of the tasaOCuota property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public void setTasaOCuota(BigDecimal value) {
-                            this.tasaOCuota = value;
-                        }
-
-                        /**
-                         * Gets the value of the importe property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public BigDecimal getImporte() {
-                            return importe;
-                        }
-
-                        /**
-                         * Sets the value of the importe property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
-                         */
-                        public void setImporte(BigDecimal value) {
-                            this.importe = value;
-                        }
-
-                    }
-
-                }
-
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="NumeroPedimento" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;length value="21"/&gt;
-             *             &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "")
-            public static class InformacionAduanera {
-
-                @XmlAttribute(name = "NumeroPedimento", required = true)
-                protected String numeroPedimento;
-
-                /**
-                 * Gets the value of the numeroPedimento property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getNumeroPedimento() {
-                    return numeroPedimento;
-                }
-
-                /**
-                 * Sets the value of the numeroPedimento property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setNumeroPedimento(String value) {
-                    this.numeroPedimento = value;
-                }
-
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;attribute name="NumeroPedimento" use="required"&gt;
-             *                   &lt;simpleType&gt;
-             *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *                       &lt;length value="21"/&gt;
-             *                       &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-             *                     &lt;/restriction&gt;
-             *                   &lt;/simpleType&gt;
-             *                 &lt;/attribute&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *       &lt;/sequence&gt;
-             *       &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
-             *       &lt;attribute name="NoIdentificacion"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;minLength value="1"/&gt;
-             *             &lt;maxLength value="100"/&gt;
-             *             &lt;whiteSpace value="collapse"/&gt;
-             *             &lt;pattern value="[^|]{1,100}"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="Cantidad" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *             &lt;fractionDigits value="6"/&gt;
-             *             &lt;minInclusive value="0.000001"/&gt;
-             *             &lt;whiteSpace value="collapse"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="Unidad"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;minLength value="1"/&gt;
-             *             &lt;maxLength value="20"/&gt;
-             *             &lt;whiteSpace value="collapse"/&gt;
-             *             &lt;pattern value="[^|]{1,20}"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="Descripcion" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;minLength value="1"/&gt;
-             *             &lt;maxLength value="1000"/&gt;
-             *             &lt;whiteSpace value="collapse"/&gt;
-             *             &lt;pattern value="[^|]{1,1000}"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="ValorUnitario" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-             *       &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "", propOrder = {
-                "informacionAduanera"
-            })
-            public static class Parte {
-
-                @XmlElement(name = "InformacionAduanera", namespace = "http://www.sat.gob.mx/cfd/3")
-                protected List<Comprobante.Conceptos.Concepto.Parte.InformacionAduanera> informacionAduanera;
-                @XmlAttribute(name = "ClaveProdServ", required = true)
-                protected String claveProdServ;
-                @XmlAttribute(name = "NoIdentificacion")
-                protected String noIdentificacion;
-                @XmlAttribute(name = "Cantidad", required = true)
-                protected BigDecimal cantidad;
-                @XmlAttribute(name = "Unidad")
-                protected String unidad;
-                @XmlAttribute(name = "Descripcion", required = true)
-                protected String descripcion;
-                @XmlAttribute(name = "ValorUnitario")
-                protected BigDecimal valorUnitario;
-                @XmlAttribute(name = "Importe")
-                protected BigDecimal importe;
-
-                /**
-                 * Gets the value of the informacionAduanera property.
-                 * 
-                 * <p>
-                 * This accessor method returns a reference to the live list,
-                 * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the informacionAduanera property.
-                 * 
-                 * <p>
-                 * For example, to add a new item, do as follows:
-                 * <pre>
-                 *    getInformacionAduanera().add(newItem);
-                 * </pre>
-                 * 
-                 * 
-                 * <p>
-                 * Objects of the following type(s) are allowed in the list
-                 * {@link Comprobante.Conceptos.Concepto.Parte.InformacionAduanera }
-                 * 
-                 * 
-                 */
-                public List<Comprobante.Conceptos.Concepto.Parte.InformacionAduanera> getInformacionAduanera() {
-                    if (informacionAduanera == null) {
-                        informacionAduanera = new ArrayList<Comprobante.Conceptos.Concepto.Parte.InformacionAduanera>();
-                    }
-                    return this.informacionAduanera;
-                }
-
-                /**
-                 * Gets the value of the claveProdServ property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getClaveProdServ() {
-                    return claveProdServ;
-                }
-
-                /**
-                 * Sets the value of the claveProdServ property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setClaveProdServ(String value) {
-                    this.claveProdServ = value;
-                }
-
-                /**
-                 * Gets the value of the noIdentificacion property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getNoIdentificacion() {
-                    return noIdentificacion;
-                }
-
-                /**
-                 * Sets the value of the noIdentificacion property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setNoIdentificacion(String value) {
-                    this.noIdentificacion = value;
-                }
-
-                /**
-                 * Gets the value of the cantidad property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public BigDecimal getCantidad() {
-                    return cantidad;
-                }
-
-                /**
-                 * Sets the value of the cantidad property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setCantidad(BigDecimal value) {
-                    this.cantidad = value;
-                }
-
-                /**
-                 * Gets the value of the unidad property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getUnidad() {
-                    return unidad;
-                }
-
-                /**
-                 * Sets the value of the unidad property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setUnidad(String value) {
-                    this.unidad = value;
-                }
-
-                /**
-                 * Gets the value of the descripcion property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getDescripcion() {
-                    return descripcion;
-                }
-
-                /**
-                 * Sets the value of the descripcion property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setDescripcion(String value) {
-                    this.descripcion = value;
-                }
-
-                /**
-                 * Gets the value of the valorUnitario property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public BigDecimal getValorUnitario() {
-                    return valorUnitario;
-                }
-
-                /**
-                 * Sets the value of the valorUnitario property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setValorUnitario(BigDecimal value) {
-                    this.valorUnitario = value;
-                }
-
-                /**
-                 * Gets the value of the importe property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public BigDecimal getImporte() {
-                    return importe;
-                }
-
-                /**
-                 * Sets the value of the importe property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setImporte(BigDecimal value) {
-                    this.importe = value;
-                }
-
-
-                /**
-                 * <p>Java class for anonymous complex type.
-                 * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
-                 * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;attribute name="NumeroPedimento" use="required"&gt;
-                 *         &lt;simpleType&gt;
-                 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-                 *             &lt;length value="21"/&gt;
-                 *             &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
-                 *           &lt;/restriction&gt;
-                 *         &lt;/simpleType&gt;
-                 *       &lt;/attribute&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
-                 * </pre>
-                 * 
-                 * 
-                 */
-                @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "")
-                public static class InformacionAduanera {
-
-                    @XmlAttribute(name = "NumeroPedimento", required = true)
-                    protected String numeroPedimento;
-
-                    /**
-                     * Gets the value of the numeroPedimento property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
-                     */
-                    public String getNumeroPedimento() {
-                        return numeroPedimento;
-                    }
-
-                    /**
-                     * Sets the value of the numeroPedimento property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
-                     */
-                    public void setNumeroPedimento(String value) {
-                        this.numeroPedimento = value;
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attribute name="Rfc" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_RFC" /&gt;
-     *       &lt;attribute name="Nombre"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;minLength value="1"/&gt;
-     *             &lt;maxLength value="254"/&gt;
-     *             &lt;whiteSpace value="collapse"/&gt;
-     *             &lt;pattern value="[^|]{1,254}"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="RegimenFiscal" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_RegimenFiscal" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class Emisor {
-
-        @XmlAttribute(name = "Rfc", required = true)
-        protected String rfc;
-        @XmlAttribute(name = "Nombre")
-        protected String nombre;
-        @XmlAttribute(name = "RegimenFiscal", required = true)
-        protected CRegimenFiscal regimenFiscal;
-
-        /**
-         * Gets the value of the rfc property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getRfc() {
-            return rfc;
-        }
-
-        /**
-         * Sets the value of the rfc property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setRfc(String value) {
-            this.rfc = value;
-        }
-
-        /**
-         * Gets the value of the nombre property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getNombre() {
-            return nombre;
-        }
-
-        /**
-         * Sets the value of the nombre property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setNombre(String value) {
-            this.nombre = value;
-        }
-
-        /**
-         * Gets the value of the regimenFiscal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public CRegimenFiscal getRegimenFiscal() {
-            return regimenFiscal;
-        }
-
-        /**
-         * Sets the value of the regimenFiscal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setRegimenFiscal(CRegimenFiscal value) {
-            this.regimenFiscal = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="Retenciones" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="Retencion" maxOccurs="unbounded"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-     *                           &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="Traslados" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="Traslado" maxOccurs="unbounded"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-     *                           &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-     *                           &lt;attribute name="TasaOCuota" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-     *                                 &lt;whiteSpace value="collapse"/&gt;
-     *                                 &lt;minInclusive value="0.000000"/&gt;
-     *                                 &lt;fractionDigits value="6"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attribute name="TotalImpuestosRetenidos" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *       &lt;attribute name="TotalImpuestosTrasladados" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "retenciones",
-        "traslados"
-    })
-    public static class Impuestos {
-
-        @XmlElement(name = "Retenciones", namespace = "http://www.sat.gob.mx/cfd/3")
-        protected Comprobante.Impuestos.Retenciones retenciones;
-        @XmlElement(name = "Traslados", namespace = "http://www.sat.gob.mx/cfd/3")
-        protected Comprobante.Impuestos.Traslados traslados;
-        @XmlAttribute(name = "TotalImpuestosRetenidos")
-        protected BigDecimal totalImpuestosRetenidos;
-        @XmlAttribute(name = "TotalImpuestosTrasladados")
-        protected BigDecimal totalImpuestosTrasladados;
-
-        /**
-         * Gets the value of the retenciones property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Comprobante.Impuestos.Retenciones }
-         *     
-         */
-        public Comprobante.Impuestos.Retenciones getRetenciones() {
-            return retenciones;
-        }
-
-        /**
-         * Sets the value of the retenciones property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Comprobante.Impuestos.Retenciones }
-         *     
-         */
-        public void setRetenciones(Comprobante.Impuestos.Retenciones value) {
-            this.retenciones = value;
-        }
-
-        /**
-         * Gets the value of the traslados property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Comprobante.Impuestos.Traslados }
-         *     
-         */
-        public Comprobante.Impuestos.Traslados getTraslados() {
-            return traslados;
-        }
-
-        /**
-         * Sets the value of the traslados property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Comprobante.Impuestos.Traslados }
-         *     
-         */
-        public void setTraslados(Comprobante.Impuestos.Traslados value) {
-            this.traslados = value;
-        }
-
-        /**
-         * Gets the value of the totalImpuestosRetenidos property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
-         */
-        public BigDecimal getTotalImpuestosRetenidos() {
-            return totalImpuestosRetenidos;
-        }
-
-        /**
-         * Sets the value of the totalImpuestosRetenidos property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
-         */
-        public void setTotalImpuestosRetenidos(BigDecimal value) {
-            this.totalImpuestosRetenidos = value;
-        }
-
-        /**
-         * Gets the value of the totalImpuestosTrasladados property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
-         */
-        public BigDecimal getTotalImpuestosTrasladados() {
-            return totalImpuestosTrasladados;
-        }
-
-        /**
-         * Sets the value of the totalImpuestosTrasladados property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
-         */
-        public void setTotalImpuestosTrasladados(BigDecimal value) {
-            this.totalImpuestosTrasladados = value;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="Retencion" maxOccurs="unbounded"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-         *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "retencion"
-        })
-        public static class Retenciones {
-
-            @XmlElement(name = "Retencion", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-            protected List<Comprobante.Impuestos.Retenciones.Retencion> retencion;
-
-            /**
-             * Gets the value of the retencion property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the retencion property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getRetencion().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link Comprobante.Impuestos.Retenciones.Retencion }
-             * 
-             * 
-             */
-            public List<Comprobante.Impuestos.Retenciones.Retencion> getRetencion() {
-                if (retencion == null) {
-                    retencion = new ArrayList<Comprobante.Impuestos.Retenciones.Retencion>();
-                }
-                return this.retencion;
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-             *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "")
-            public static class Retencion {
-
-                @XmlAttribute(name = "Impuesto", required = true)
-                protected String impuesto;
-                @XmlAttribute(name = "Importe", required = true)
-                protected BigDecimal importe;
-
-                /**
-                 * Gets the value of the impuesto property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getImpuesto() {
-                    return impuesto;
-                }
-
-                /**
-                 * Sets the value of the impuesto property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setImpuesto(String value) {
-                    this.impuesto = value;
-                }
-
-                /**
-                 * Gets the value of the importe property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public BigDecimal getImporte() {
-                    return importe;
-                }
-
-                /**
-                 * Sets the value of the importe property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setImporte(BigDecimal value) {
-                    this.importe = value;
-                }
-
-            }
-
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="Traslado" maxOccurs="unbounded"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-         *                 &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-         *                 &lt;attribute name="TasaOCuota" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-         *                       &lt;whiteSpace value="collapse"/&gt;
-         *                       &lt;minInclusive value="0.000000"/&gt;
-         *                       &lt;fractionDigits value="6"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "traslado"
-        })
-        public static class Traslados {
-
-            @XmlElement(name = "Traslado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
-            protected List<Comprobante.Impuestos.Traslados.Traslado> traslado;
-
-            /**
-             * Gets the value of the traslado property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the traslado property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getTraslado().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link Comprobante.Impuestos.Traslados.Traslado }
-             * 
-             * 
-             */
-            public List<Comprobante.Impuestos.Traslados.Traslado> getTraslado() {
-                if (traslado == null) {
-                    traslado = new ArrayList<Comprobante.Impuestos.Traslados.Traslado>();
-                }
-                return this.traslado;
-            }
-
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
-             *       &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
-             *       &lt;attribute name="TasaOCuota" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
-             *             &lt;whiteSpace value="collapse"/&gt;
-             *             &lt;minInclusive value="0.000000"/&gt;
-             *             &lt;fractionDigits value="6"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
-            @XmlAccessorType(XmlAccessType.FIELD)
-            @XmlType(name = "")
-            public static class Traslado {
-
-                @XmlAttribute(name = "Impuesto", required = true)
-                protected String impuesto;
-                @XmlAttribute(name = "TipoFactor", required = true)
-                protected CTipoFactor tipoFactor;
-                @XmlAttribute(name = "TasaOCuota", required = true)
-                protected BigDecimal tasaOCuota;
-                @XmlAttribute(name = "Importe", required = true)
-                protected BigDecimal importe;
-
-                /**
-                 * Gets the value of the impuesto property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getImpuesto() {
-                    return impuesto;
-                }
-
-                /**
-                 * Sets the value of the impuesto property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setImpuesto(String value) {
-                    this.impuesto = value;
-                }
-
-                /**
-                 * Gets the value of the tipoFactor property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link CTipoFactor }
-                 *     
-                 */
-                public CTipoFactor getTipoFactor() {
-                    return tipoFactor;
-                }
-
-                /**
-                 * Sets the value of the tipoFactor property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link CTipoFactor }
-                 *     
-                 */
-                public void setTipoFactor(CTipoFactor value) {
-                    this.tipoFactor = value;
-                }
-
-                /**
-                 * Gets the value of the tasaOCuota property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public BigDecimal getTasaOCuota() {
-                    return tasaOCuota;
-                }
-
-                /**
-                 * Sets the value of the tasaOCuota property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setTasaOCuota(BigDecimal value) {
-                    this.tasaOCuota = value;
-                }
-
-                /**
-                 * Gets the value of the importe property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public BigDecimal getImporte() {
-                    return importe;
-                }
-
-                /**
-                 * Sets the value of the importe property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setImporte(BigDecimal value) {
-                    this.importe = value;
-                }
-
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attribute name="Rfc" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_RFC" /&gt;
-     *       &lt;attribute name="Nombre"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;minLength value="1"/&gt;
-     *             &lt;maxLength value="254"/&gt;
-     *             &lt;whiteSpace value="collapse"/&gt;
-     *             &lt;pattern value="[^|]{1,254}"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="ResidenciaFiscal" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Pais" /&gt;
-     *       &lt;attribute name="NumRegIdTrib"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;minLength value="1"/&gt;
-     *             &lt;maxLength value="40"/&gt;
-     *             &lt;whiteSpace value="collapse"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="UsoCFDI" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_UsoCFDI" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class Receptor {
-
-        @XmlAttribute(name = "Rfc", required = true)
-        protected String rfc;
-        @XmlAttribute(name = "Nombre")
-        protected String nombre;
-        @XmlAttribute(name = "ResidenciaFiscal")
-        protected CPais residenciaFiscal;
-        @XmlAttribute(name = "NumRegIdTrib")
-        protected String numRegIdTrib;
-        @XmlAttribute(name = "UsoCFDI", required = true)
-        protected CUsoCFDI usoCFDI;
-
-        /**
-         * Gets the value of the rfc property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getRfc() {
-            return rfc;
-        }
-
-        /**
-         * Sets the value of the rfc property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setRfc(String value) {
-            this.rfc = value;
-        }
-
-        /**
-         * Gets the value of the nombre property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getNombre() {
-            return nombre;
-        }
-
-        /**
-         * Sets the value of the nombre property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setNombre(String value) {
-            this.nombre = value;
-        }
-
-        /**
-         * Gets the value of the residenciaFiscal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link CPais }
-         *     
-         */
-        public CPais getResidenciaFiscal() {
-            return residenciaFiscal;
-        }
-
-        /**
-         * Sets the value of the residenciaFiscal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link CPais }
-         *     
-         */
-        public void setResidenciaFiscal(CPais value) {
-            this.residenciaFiscal = value;
-        }
-
-        /**
-         * Gets the value of the numRegIdTrib property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getNumRegIdTrib() {
-            return numRegIdTrib;
-        }
-
-        /**
-         * Sets the value of the numRegIdTrib property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setNumRegIdTrib(String value) {
-            this.numRegIdTrib = value;
-        }
-
-        /**
-         * Gets the value of the usoCFDI property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link CUsoCFDI }
-         *     
-         */
-        public CUsoCFDI getUsoCFDI() {
-            return usoCFDI;
-        }
-
-        /**
-         * Sets the value of the usoCFDI property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link CUsoCFDI }
-         *     
-         */
-        public void setUsoCFDI(CUsoCFDI value) {
-            this.usoCFDI = value;
-        }
-
-    }
+	@XmlElement(name = "CfdiRelacionados", namespace = "http://www.sat.gob.mx/cfd/3")
+	protected Comprobante.CfdiRelacionados cfdiRelacionados;
+	@XmlElement(name = "Emisor", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+	protected Comprobante.Emisor emisor;
+	@XmlElement(name = "Receptor", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+	protected Comprobante.Receptor receptor;
+	@XmlElement(name = "Conceptos", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+	protected Comprobante.Conceptos conceptos;
+	@XmlElement(name = "Impuestos", namespace = "http://www.sat.gob.mx/cfd/3")
+	protected Comprobante.Impuestos impuestos;
+	@XmlElement(name = "Complemento", namespace = "http://www.sat.gob.mx/cfd/3")
+	protected List<Comprobante.Complemento> complemento;
+	@XmlElement(name = "Addenda", namespace = "http://www.sat.gob.mx/cfd/3")
+	protected Comprobante.Addenda addenda;
+	@XmlAttribute(name = "Version", required = true)
+	protected String version;
+	@XmlAttribute(name = "Serie")
+	protected String serie;
+	@XmlAttribute(name = "Folio")
+	protected String folio;
+	@XmlAttribute(name = "Fecha", required = true)
+	@XmlJavaTypeAdapter(DateAdapter.class)
+	protected Date fecha;
+	@XmlAttribute(name = "Sello", required = true)
+	protected String sello;
+	@XmlAttribute(name = "FormaPago")
+	protected CFormaPago formaPago;
+	@XmlAttribute(name = "NoCertificado", required = true)
+	protected String noCertificado;
+	@XmlAttribute(name = "Certificado", required = true)
+	protected String certificado;
+	@XmlAttribute(name = "CondicionesDePago")
+	protected String condicionesDePago;
+	@XmlAttribute(name = "SubTotal", required = true)
+	protected BigDecimal subTotal;
+	@XmlAttribute(name = "Descuento")
+	protected BigDecimal descuento;
+	@XmlAttribute(name = "Moneda", required = true)
+	protected CMoneda moneda;
+	@XmlAttribute(name = "TipoCambio")
+	protected BigDecimal tipoCambio;
+	@XmlAttribute(name = "Total", required = true)
+	protected BigDecimal total;
+	@XmlAttribute(name = "TipoDeComprobante", required = true)
+	protected CTipoDeComprobante tipoDeComprobante;
+	@XmlAttribute(name = "MetodoPago")
+	protected CMetodoPago metodoPago;
+	@XmlAttribute(name = "LugarExpedicion", required = true)
+	protected String lugarExpedicion;
+	@XmlAttribute(name = "Confirmacion")
+	protected String confirmacion;
+
+	/**
+	 * Gets the value of the cfdiRelacionados property.
+	 * 
+	 * @return possible object is {@link Comprobante.CfdiRelacionados }
+	 * 
+	 */
+	public Comprobante.CfdiRelacionados getCfdiRelacionados() {
+		return cfdiRelacionados;
+	}
+
+	/**
+	 * Sets the value of the cfdiRelacionados property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Comprobante.CfdiRelacionados }
+	 * 
+	 */
+	public void setCfdiRelacionados(Comprobante.CfdiRelacionados value) {
+		this.cfdiRelacionados = value;
+	}
+
+	/**
+	 * Gets the value of the emisor property.
+	 * 
+	 * @return possible object is {@link Comprobante.Emisor }
+	 * 
+	 */
+	public Comprobante.Emisor getEmisor() {
+		return emisor;
+	}
+
+	/**
+	 * Sets the value of the emisor property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Comprobante.Emisor }
+	 * 
+	 */
+	public void setEmisor(Comprobante.Emisor value) {
+		this.emisor = value;
+	}
+
+	/**
+	 * Gets the value of the receptor property.
+	 * 
+	 * @return possible object is {@link Comprobante.Receptor }
+	 * 
+	 */
+	public Comprobante.Receptor getReceptor() {
+		return receptor;
+	}
+
+	/**
+	 * Sets the value of the receptor property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Comprobante.Receptor }
+	 * 
+	 */
+	public void setReceptor(Comprobante.Receptor value) {
+		this.receptor = value;
+	}
+
+	/**
+	 * Gets the value of the conceptos property.
+	 * 
+	 * @return possible object is {@link Comprobante.Conceptos }
+	 * 
+	 */
+	public Comprobante.Conceptos getConceptos() {
+		return conceptos;
+	}
+
+	/**
+	 * Sets the value of the conceptos property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Comprobante.Conceptos }
+	 * 
+	 */
+	public void setConceptos(Comprobante.Conceptos value) {
+		this.conceptos = value;
+	}
+
+	/**
+	 * Gets the value of the impuestos property.
+	 * 
+	 * @return possible object is {@link Comprobante.Impuestos }
+	 * 
+	 */
+	public Comprobante.Impuestos getImpuestos() {
+		return impuestos;
+	}
+
+	/**
+	 * Sets the value of the impuestos property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Comprobante.Impuestos }
+	 * 
+	 */
+	public void setImpuestos(Comprobante.Impuestos value) {
+		this.impuestos = value;
+	}
+
+	/**
+	 * Gets the value of the complemento property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the complemento property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getComplemento().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link Comprobante.Complemento }
+	 * 
+	 * 
+	 */
+	public List<Comprobante.Complemento> getComplemento() {
+		if (complemento == null) {
+			complemento = new ArrayList<Comprobante.Complemento>();
+		}
+		return this.complemento;
+	}
+
+	/**
+	 * Gets the value of the addenda property.
+	 * 
+	 * @return possible object is {@link Comprobante.Addenda }
+	 * 
+	 */
+	public Comprobante.Addenda getAddenda() {
+		return addenda;
+	}
+
+	/**
+	 * Sets the value of the addenda property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Comprobante.Addenda }
+	 * 
+	 */
+	public void setAddenda(Comprobante.Addenda value) {
+		this.addenda = value;
+	}
+
+	/**
+	 * Gets the value of the version property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getVersion() {
+		if (version == null) {
+			return "3.3";
+		} else {
+			return version;
+		}
+	}
+
+	/**
+	 * Sets the value of the version property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setVersion(String value) {
+		this.version = value;
+	}
+
+	/**
+	 * Gets the value of the serie property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSerie() {
+		return serie;
+	}
+
+	/**
+	 * Sets the value of the serie property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSerie(String value) {
+		this.serie = value;
+	}
+
+	/**
+	 * Gets the value of the folio property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getFolio() {
+		return folio;
+	}
+
+	/**
+	 * Sets the value of the folio property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setFolio(String value) {
+		this.folio = value;
+	}
+
+	/**
+	 * Gets the value of the fecha property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public Date getFecha() {
+		return fecha;
+	}
+
+	/**
+	 * Sets the value of the fecha property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setFecha(Date value) {
+		this.fecha = value;
+	}
+
+	/**
+	 * Gets the value of the sello property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSello() {
+		return sello;
+	}
+
+	/**
+	 * Sets the value of the sello property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSello(String value) {
+		this.sello = value;
+	}
+
+	/**
+	 * Gets the value of the formaPago property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public CFormaPago getFormaPago() {
+		return formaPago;
+	}
+
+	/**
+	 * Sets the value of the formaPago property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setFormaPago(CFormaPago value) {
+		this.formaPago = value;
+	}
+
+	/**
+	 * Gets the value of the noCertificado property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getNoCertificado() {
+		return noCertificado;
+	}
+
+	/**
+	 * Sets the value of the noCertificado property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setNoCertificado(String value) {
+		this.noCertificado = value;
+	}
+
+	/**
+	 * Gets the value of the certificado property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCertificado() {
+		return certificado;
+	}
+
+	/**
+	 * Sets the value of the certificado property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCertificado(String value) {
+		this.certificado = value;
+	}
+
+	/**
+	 * Gets the value of the condicionesDePago property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCondicionesDePago() {
+		return condicionesDePago;
+	}
+
+	/**
+	 * Sets the value of the condicionesDePago property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCondicionesDePago(String value) {
+		this.condicionesDePago = value;
+	}
+
+	/**
+	 * Gets the value of the subTotal property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getSubTotal() {
+		return subTotal;
+	}
+
+	/**
+	 * Sets the value of the subTotal property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setSubTotal(BigDecimal value) {
+		this.subTotal = value;
+	}
+
+	/**
+	 * Gets the value of the descuento property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getDescuento() {
+		return descuento;
+	}
+
+	/**
+	 * Sets the value of the descuento property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setDescuento(BigDecimal value) {
+		this.descuento = value;
+	}
+
+	/**
+	 * Gets the value of the moneda property.
+	 * 
+	 * @return possible object is {@link CMoneda }
+	 * 
+	 */
+	public CMoneda getMoneda() {
+		return moneda;
+	}
+
+	/**
+	 * Sets the value of the moneda property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link CMoneda }
+	 * 
+	 */
+	public void setMoneda(CMoneda value) {
+		this.moneda = value;
+	}
+
+	/**
+	 * Gets the value of the tipoCambio property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getTipoCambio() {
+		return tipoCambio;
+	}
+
+	/**
+	 * Sets the value of the tipoCambio property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setTipoCambio(BigDecimal value) {
+		this.tipoCambio = value;
+	}
+
+	/**
+	 * Gets the value of the total property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getTotal() {
+		return total;
+	}
+
+	/**
+	 * Sets the value of the total property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setTotal(BigDecimal value) {
+		this.total = value;
+	}
+
+	/**
+	 * Gets the value of the tipoDeComprobante property.
+	 * 
+	 * @return possible object is {@link CTipoDeComprobante }
+	 * 
+	 */
+	public CTipoDeComprobante getTipoDeComprobante() {
+		return tipoDeComprobante;
+	}
+
+	/**
+	 * Sets the value of the tipoDeComprobante property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link CTipoDeComprobante }
+	 * 
+	 */
+	public void setTipoDeComprobante(CTipoDeComprobante value) {
+		this.tipoDeComprobante = value;
+	}
+
+	/**
+	 * Gets the value of the metodoPago property.
+	 * 
+	 * @return possible object is {@link CMetodoPago }
+	 * 
+	 */
+	public CMetodoPago getMetodoPago() {
+		return metodoPago;
+	}
+
+	/**
+	 * Sets the value of the metodoPago property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link CMetodoPago }
+	 * 
+	 */
+	public void setMetodoPago(CMetodoPago value) {
+		this.metodoPago = value;
+	}
+
+	/**
+	 * Gets the value of the lugarExpedicion property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getLugarExpedicion() {
+		return lugarExpedicion;
+	}
+
+	/**
+	 * Sets the value of the lugarExpedicion property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setLugarExpedicion(String value) {
+		this.lugarExpedicion = value;
+	}
+
+	/**
+	 * Gets the value of the confirmacion property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getConfirmacion() {
+		return confirmacion;
+	}
+
+	/**
+	 * Sets the value of the confirmacion property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setConfirmacion(String value) {
+		this.confirmacion = value;
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;sequence&gt;
+	 *         &lt;any maxOccurs="unbounded"/&gt;
+	 *       &lt;/sequence&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "", propOrder = { "any" })
+	public static class Addenda {
+
+		@XmlAnyElement(lax = true)
+		protected List<Object> any;
+
+		/**
+		 * Gets the value of the any property.
+		 * 
+		 * <p>
+		 * This accessor method returns a reference to the live list, not a snapshot.
+		 * Therefore any modification you make to the returned list will be present
+		 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+		 * for the any property.
+		 * 
+		 * <p>
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * <pre>
+		 * getAny().add(newItem);
+		 * </pre>
+		 * 
+		 * 
+		 * <p>
+		 * Objects of the following type(s) are allowed in the list {@link Object }
+		 * 
+		 * 
+		 */
+		public List<Object> getAny() {
+			if (any == null) {
+				any = new ArrayList<Object>();
+			}
+			return this.any;
+		}
+
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;sequence&gt;
+	 *         &lt;element name="CfdiRelacionado" maxOccurs="unbounded"&gt;
+	 *           &lt;complexType&gt;
+	 *             &lt;complexContent&gt;
+	 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                 &lt;attribute name="UUID" use="required"&gt;
+	 *                   &lt;simpleType&gt;
+	 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                       &lt;length value="36"/&gt;
+	 *                       &lt;whiteSpace value="collapse"/&gt;
+	 *                       &lt;pattern value="[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}"/&gt;
+	 *                     &lt;/restriction&gt;
+	 *                   &lt;/simpleType&gt;
+	 *                 &lt;/attribute&gt;
+	 *               &lt;/restriction&gt;
+	 *             &lt;/complexContent&gt;
+	 *           &lt;/complexType&gt;
+	 *         &lt;/element&gt;
+	 *       &lt;/sequence&gt;
+	 *       &lt;attribute name="TipoRelacion" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion" /&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "", propOrder = { "cfdiRelacionado" })
+	public static class CfdiRelacionados {
+
+		@XmlElement(name = "CfdiRelacionado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+		protected List<Comprobante.CfdiRelacionados.CfdiRelacionado> cfdiRelacionado;
+		@XmlAttribute(name = "TipoRelacion", required = true)
+		protected CTipoRelacion tipoRelacion;
+
+		/**
+		 * Gets the value of the cfdiRelacionado property.
+		 * 
+		 * <p>
+		 * This accessor method returns a reference to the live list, not a snapshot.
+		 * Therefore any modification you make to the returned list will be present
+		 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+		 * for the cfdiRelacionado property.
+		 * 
+		 * <p>
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * <pre>
+		 * getCfdiRelacionado().add(newItem);
+		 * </pre>
+		 * 
+		 * 
+		 * <p>
+		 * Objects of the following type(s) are allowed in the list
+		 * {@link Comprobante.CfdiRelacionados.CfdiRelacionado }
+		 * 
+		 * 
+		 */
+		public List<Comprobante.CfdiRelacionados.CfdiRelacionado> getCfdiRelacionado() {
+			if (cfdiRelacionado == null) {
+				cfdiRelacionado = new ArrayList<Comprobante.CfdiRelacionados.CfdiRelacionado>();
+			}
+			return this.cfdiRelacionado;
+		}
+
+		/**
+		 * Gets the value of the tipoRelacion property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public CTipoRelacion getTipoRelacion() {
+			return tipoRelacion;
+		}
+
+		/**
+		 * Sets the value of the tipoRelacion property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setTipoRelacion(CTipoRelacion value) {
+			this.tipoRelacion = value;
+		}
+
+		/**
+		 * <p>
+		 * Java class for anonymous complex type.
+		 * 
+		 * <p>
+		 * The following schema fragment specifies the expected content contained within
+		 * this class.
+		 * 
+		 * <pre>
+		 * &lt;complexType&gt;
+		 *   &lt;complexContent&gt;
+		 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *       &lt;attribute name="UUID" use="required"&gt;
+		 *         &lt;simpleType&gt;
+		 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *             &lt;length value="36"/&gt;
+		 *             &lt;whiteSpace value="collapse"/&gt;
+		 *             &lt;pattern value="[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}"/&gt;
+		 *           &lt;/restriction&gt;
+		 *         &lt;/simpleType&gt;
+		 *       &lt;/attribute&gt;
+		 *     &lt;/restriction&gt;
+		 *   &lt;/complexContent&gt;
+		 * &lt;/complexType&gt;
+		 * </pre>
+		 * 
+		 * 
+		 */
+		@XmlAccessorType(XmlAccessType.FIELD)
+		@XmlType(name = "")
+		public static class CfdiRelacionado {
+
+			@XmlAttribute(name = "UUID", required = true)
+			protected String uuid;
+
+			/**
+			 * Gets the value of the uuid property.
+			 * 
+			 * @return possible object is {@link String }
+			 * 
+			 */
+			public String getUUID() {
+				return uuid;
+			}
+
+			/**
+			 * Sets the value of the uuid property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link String }
+			 * 
+			 */
+			public void setUUID(String value) {
+				this.uuid = value;
+			}
+
+		}
+
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;sequence&gt;
+	 *         &lt;any maxOccurs="unbounded" minOccurs="0"/&gt;
+	 *       &lt;/sequence&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "", propOrder = { "any" })
+	public static class Complemento {
+
+		@XmlAnyElement(lax = true)
+		protected List<Object> any;
+
+		/**
+		 * Gets the value of the any property.
+		 * 
+		 * <p>
+		 * This accessor method returns a reference to the live list, not a snapshot.
+		 * Therefore any modification you make to the returned list will be present
+		 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+		 * for the any property.
+		 * 
+		 * <p>
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * <pre>
+		 * getAny().add(newItem);
+		 * </pre>
+		 * 
+		 * 
+		 * <p>
+		 * Objects of the following type(s) are allowed in the list {@link Object }
+		 * 
+		 * 
+		 */
+		public List<Object> getAny() {
+			if (any == null) {
+				any = new ArrayList<Object>();
+			}
+			return this.any;
+		}
+
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;sequence&gt;
+	 *         &lt;element name="Concepto" maxOccurs="unbounded"&gt;
+	 *           &lt;complexType&gt;
+	 *             &lt;complexContent&gt;
+	 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                 &lt;sequence&gt;
+	 *                   &lt;element name="Impuestos" minOccurs="0"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;sequence&gt;
+	 *                             &lt;element name="Traslados" minOccurs="0"&gt;
+	 *                               &lt;complexType&gt;
+	 *                                 &lt;complexContent&gt;
+	 *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                                     &lt;sequence&gt;
+	 *                                       &lt;element name="Traslado" maxOccurs="unbounded"&gt;
+	 *                                         &lt;complexType&gt;
+	 *                                           &lt;complexContent&gt;
+	 *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                                               &lt;attribute name="Base" use="required"&gt;
+	 *                                                 &lt;simpleType&gt;
+	 *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                                                     &lt;fractionDigits value="6"/&gt;
+	 *                                                     &lt;minInclusive value="0.000001"/&gt;
+	 *                                                     &lt;whiteSpace value="collapse"/&gt;
+	 *                                                   &lt;/restriction&gt;
+	 *                                                 &lt;/simpleType&gt;
+	 *                                               &lt;/attribute&gt;
+	 *                                               &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+	 *                                               &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+	 *                                               &lt;attribute name="TasaOCuota"&gt;
+	 *                                                 &lt;simpleType&gt;
+	 *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                                                     &lt;fractionDigits value="6"/&gt;
+	 *                                                     &lt;minInclusive value="0.000000"/&gt;
+	 *                                                     &lt;whiteSpace value="collapse"/&gt;
+	 *                                                   &lt;/restriction&gt;
+	 *                                                 &lt;/simpleType&gt;
+	 *                                               &lt;/attribute&gt;
+	 *                                               &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                                             &lt;/restriction&gt;
+	 *                                           &lt;/complexContent&gt;
+	 *                                         &lt;/complexType&gt;
+	 *                                       &lt;/element&gt;
+	 *                                     &lt;/sequence&gt;
+	 *                                   &lt;/restriction&gt;
+	 *                                 &lt;/complexContent&gt;
+	 *                               &lt;/complexType&gt;
+	 *                             &lt;/element&gt;
+	 *                             &lt;element name="Retenciones" minOccurs="0"&gt;
+	 *                               &lt;complexType&gt;
+	 *                                 &lt;complexContent&gt;
+	 *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                                     &lt;sequence&gt;
+	 *                                       &lt;element name="Retencion" maxOccurs="unbounded"&gt;
+	 *                                         &lt;complexType&gt;
+	 *                                           &lt;complexContent&gt;
+	 *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                                               &lt;attribute name="Base" use="required"&gt;
+	 *                                                 &lt;simpleType&gt;
+	 *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                                                     &lt;fractionDigits value="6"/&gt;
+	 *                                                     &lt;minInclusive value="0.000001"/&gt;
+	 *                                                     &lt;whiteSpace value="collapse"/&gt;
+	 *                                                   &lt;/restriction&gt;
+	 *                                                 &lt;/simpleType&gt;
+	 *                                               &lt;/attribute&gt;
+	 *                                               &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+	 *                                               &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+	 *                                               &lt;attribute name="TasaOCuota" use="required"&gt;
+	 *                                                 &lt;simpleType&gt;
+	 *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                                                     &lt;whiteSpace value="collapse"/&gt;
+	 *                                                     &lt;minInclusive value="0.000000"/&gt;
+	 *                                                     &lt;fractionDigits value="6"/&gt;
+	 *                                                   &lt;/restriction&gt;
+	 *                                                 &lt;/simpleType&gt;
+	 *                                               &lt;/attribute&gt;
+	 *                                               &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                                             &lt;/restriction&gt;
+	 *                                           &lt;/complexContent&gt;
+	 *                                         &lt;/complexType&gt;
+	 *                                       &lt;/element&gt;
+	 *                                     &lt;/sequence&gt;
+	 *                                   &lt;/restriction&gt;
+	 *                                 &lt;/complexContent&gt;
+	 *                               &lt;/complexType&gt;
+	 *                             &lt;/element&gt;
+	 *                           &lt;/sequence&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                   &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;attribute name="NumeroPedimento" use="required"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                                 &lt;length value="21"/&gt;
+	 *                                 &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                   &lt;element name="CuentaPredial" minOccurs="0"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;attribute name="Numero" use="required"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                                 &lt;minLength value="1"/&gt;
+	 *                                 &lt;maxLength value="150"/&gt;
+	 *                                 &lt;whiteSpace value="collapse"/&gt;
+	 *                                 &lt;pattern value="[0-9]{1,150}"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                   &lt;element name="ComplementoConcepto" minOccurs="0"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;sequence&gt;
+	 *                             &lt;any maxOccurs="unbounded"/&gt;
+	 *                           &lt;/sequence&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                   &lt;element name="Parte" maxOccurs="unbounded" minOccurs="0"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;sequence&gt;
+	 *                             &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
+	 *                               &lt;complexType&gt;
+	 *                                 &lt;complexContent&gt;
+	 *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                                     &lt;attribute name="NumeroPedimento" use="required"&gt;
+	 *                                       &lt;simpleType&gt;
+	 *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                                           &lt;length value="21"/&gt;
+	 *                                           &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+	 *                                         &lt;/restriction&gt;
+	 *                                       &lt;/simpleType&gt;
+	 *                                     &lt;/attribute&gt;
+	 *                                   &lt;/restriction&gt;
+	 *                                 &lt;/complexContent&gt;
+	 *                               &lt;/complexType&gt;
+	 *                             &lt;/element&gt;
+	 *                           &lt;/sequence&gt;
+	 *                           &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
+	 *                           &lt;attribute name="NoIdentificacion"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                                 &lt;minLength value="1"/&gt;
+	 *                                 &lt;maxLength value="100"/&gt;
+	 *                                 &lt;whiteSpace value="collapse"/&gt;
+	 *                                 &lt;pattern value="[^|]{1,100}"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                           &lt;attribute name="Cantidad" use="required"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                                 &lt;fractionDigits value="6"/&gt;
+	 *                                 &lt;minInclusive value="0.000001"/&gt;
+	 *                                 &lt;whiteSpace value="collapse"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                           &lt;attribute name="Unidad"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                                 &lt;minLength value="1"/&gt;
+	 *                                 &lt;maxLength value="20"/&gt;
+	 *                                 &lt;whiteSpace value="collapse"/&gt;
+	 *                                 &lt;pattern value="[^|]{1,20}"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                           &lt;attribute name="Descripcion" use="required"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                                 &lt;minLength value="1"/&gt;
+	 *                                 &lt;maxLength value="1000"/&gt;
+	 *                                 &lt;whiteSpace value="collapse"/&gt;
+	 *                                 &lt;pattern value="[^|]{1,1000}"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                           &lt;attribute name="ValorUnitario" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                           &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                 &lt;/sequence&gt;
+	 *                 &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
+	 *                 &lt;attribute name="NoIdentificacion"&gt;
+	 *                   &lt;simpleType&gt;
+	 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                       &lt;whiteSpace value="collapse"/&gt;
+	 *                       &lt;minLength value="1"/&gt;
+	 *                       &lt;maxLength value="100"/&gt;
+	 *                       &lt;pattern value="[^|]{1,100}"/&gt;
+	 *                     &lt;/restriction&gt;
+	 *                   &lt;/simpleType&gt;
+	 *                 &lt;/attribute&gt;
+	 *                 &lt;attribute name="Cantidad" use="required"&gt;
+	 *                   &lt;simpleType&gt;
+	 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                       &lt;fractionDigits value="6"/&gt;
+	 *                       &lt;minInclusive value="0.000001"/&gt;
+	 *                       &lt;whiteSpace value="collapse"/&gt;
+	 *                     &lt;/restriction&gt;
+	 *                   &lt;/simpleType&gt;
+	 *                 &lt;/attribute&gt;
+	 *                 &lt;attribute name="ClaveUnidad" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveUnidad" /&gt;
+	 *                 &lt;attribute name="Unidad"&gt;
+	 *                   &lt;simpleType&gt;
+	 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                       &lt;minLength value="1"/&gt;
+	 *                       &lt;maxLength value="20"/&gt;
+	 *                       &lt;whiteSpace value="collapse"/&gt;
+	 *                       &lt;pattern value="[^|]{1,20}"/&gt;
+	 *                     &lt;/restriction&gt;
+	 *                   &lt;/simpleType&gt;
+	 *                 &lt;/attribute&gt;
+	 *                 &lt;attribute name="Descripcion" use="required"&gt;
+	 *                   &lt;simpleType&gt;
+	 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *                       &lt;minLength value="1"/&gt;
+	 *                       &lt;maxLength value="1000"/&gt;
+	 *                       &lt;whiteSpace value="collapse"/&gt;
+	 *                       &lt;pattern value="[^|]{1,1000}"/&gt;
+	 *                     &lt;/restriction&gt;
+	 *                   &lt;/simpleType&gt;
+	 *                 &lt;/attribute&gt;
+	 *                 &lt;attribute name="ValorUnitario" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                 &lt;attribute name="Descuento" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *               &lt;/restriction&gt;
+	 *             &lt;/complexContent&gt;
+	 *           &lt;/complexType&gt;
+	 *         &lt;/element&gt;
+	 *       &lt;/sequence&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "", propOrder = { "concepto" })
+	public static class Conceptos {
+
+		@XmlElement(name = "Concepto", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+		protected List<Comprobante.Conceptos.Concepto> concepto;
+
+		/**
+		 * Gets the value of the concepto property.
+		 * 
+		 * <p>
+		 * This accessor method returns a reference to the live list, not a snapshot.
+		 * Therefore any modification you make to the returned list will be present
+		 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+		 * for the concepto property.
+		 * 
+		 * <p>
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * <pre>
+		 * getConcepto().add(newItem);
+		 * </pre>
+		 * 
+		 * 
+		 * <p>
+		 * Objects of the following type(s) are allowed in the list
+		 * {@link Comprobante.Conceptos.Concepto }
+		 * 
+		 * 
+		 */
+		public List<Comprobante.Conceptos.Concepto> getConcepto() {
+			if (concepto == null) {
+				concepto = new ArrayList<Comprobante.Conceptos.Concepto>();
+			}
+			return this.concepto;
+		}
+
+		/**
+		 * <p>
+		 * Java class for anonymous complex type.
+		 * 
+		 * <p>
+		 * The following schema fragment specifies the expected content contained within
+		 * this class.
+		 * 
+		 * <pre>
+		 * &lt;complexType&gt;
+		 *   &lt;complexContent&gt;
+		 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *       &lt;sequence&gt;
+		 *         &lt;element name="Impuestos" minOccurs="0"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;sequence&gt;
+		 *                   &lt;element name="Traslados" minOccurs="0"&gt;
+		 *                     &lt;complexType&gt;
+		 *                       &lt;complexContent&gt;
+		 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                           &lt;sequence&gt;
+		 *                             &lt;element name="Traslado" maxOccurs="unbounded"&gt;
+		 *                               &lt;complexType&gt;
+		 *                                 &lt;complexContent&gt;
+		 *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                                     &lt;attribute name="Base" use="required"&gt;
+		 *                                       &lt;simpleType&gt;
+		 *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *                                           &lt;fractionDigits value="6"/&gt;
+		 *                                           &lt;minInclusive value="0.000001"/&gt;
+		 *                                           &lt;whiteSpace value="collapse"/&gt;
+		 *                                         &lt;/restriction&gt;
+		 *                                       &lt;/simpleType&gt;
+		 *                                     &lt;/attribute&gt;
+		 *                                     &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+		 *                                     &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+		 *                                     &lt;attribute name="TasaOCuota"&gt;
+		 *                                       &lt;simpleType&gt;
+		 *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *                                           &lt;fractionDigits value="6"/&gt;
+		 *                                           &lt;minInclusive value="0.000000"/&gt;
+		 *                                           &lt;whiteSpace value="collapse"/&gt;
+		 *                                         &lt;/restriction&gt;
+		 *                                       &lt;/simpleType&gt;
+		 *                                     &lt;/attribute&gt;
+		 *                                     &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *                                   &lt;/restriction&gt;
+		 *                                 &lt;/complexContent&gt;
+		 *                               &lt;/complexType&gt;
+		 *                             &lt;/element&gt;
+		 *                           &lt;/sequence&gt;
+		 *                         &lt;/restriction&gt;
+		 *                       &lt;/complexContent&gt;
+		 *                     &lt;/complexType&gt;
+		 *                   &lt;/element&gt;
+		 *                   &lt;element name="Retenciones" minOccurs="0"&gt;
+		 *                     &lt;complexType&gt;
+		 *                       &lt;complexContent&gt;
+		 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                           &lt;sequence&gt;
+		 *                             &lt;element name="Retencion" maxOccurs="unbounded"&gt;
+		 *                               &lt;complexType&gt;
+		 *                                 &lt;complexContent&gt;
+		 *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                                     &lt;attribute name="Base" use="required"&gt;
+		 *                                       &lt;simpleType&gt;
+		 *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *                                           &lt;fractionDigits value="6"/&gt;
+		 *                                           &lt;minInclusive value="0.000001"/&gt;
+		 *                                           &lt;whiteSpace value="collapse"/&gt;
+		 *                                         &lt;/restriction&gt;
+		 *                                       &lt;/simpleType&gt;
+		 *                                     &lt;/attribute&gt;
+		 *                                     &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+		 *                                     &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+		 *                                     &lt;attribute name="TasaOCuota" use="required"&gt;
+		 *                                       &lt;simpleType&gt;
+		 *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *                                           &lt;whiteSpace value="collapse"/&gt;
+		 *                                           &lt;minInclusive value="0.000000"/&gt;
+		 *                                           &lt;fractionDigits value="6"/&gt;
+		 *                                         &lt;/restriction&gt;
+		 *                                       &lt;/simpleType&gt;
+		 *                                     &lt;/attribute&gt;
+		 *                                     &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *                                   &lt;/restriction&gt;
+		 *                                 &lt;/complexContent&gt;
+		 *                               &lt;/complexType&gt;
+		 *                             &lt;/element&gt;
+		 *                           &lt;/sequence&gt;
+		 *                         &lt;/restriction&gt;
+		 *                       &lt;/complexContent&gt;
+		 *                     &lt;/complexType&gt;
+		 *                   &lt;/element&gt;
+		 *                 &lt;/sequence&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *         &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;attribute name="NumeroPedimento" use="required"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *                       &lt;length value="21"/&gt;
+		 *                       &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *         &lt;element name="CuentaPredial" minOccurs="0"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;attribute name="Numero" use="required"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *                       &lt;minLength value="1"/&gt;
+		 *                       &lt;maxLength value="150"/&gt;
+		 *                       &lt;whiteSpace value="collapse"/&gt;
+		 *                       &lt;pattern value="[0-9]{1,150}"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *         &lt;element name="ComplementoConcepto" minOccurs="0"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;sequence&gt;
+		 *                   &lt;any maxOccurs="unbounded"/&gt;
+		 *                 &lt;/sequence&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *         &lt;element name="Parte" maxOccurs="unbounded" minOccurs="0"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;sequence&gt;
+		 *                   &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
+		 *                     &lt;complexType&gt;
+		 *                       &lt;complexContent&gt;
+		 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                           &lt;attribute name="NumeroPedimento" use="required"&gt;
+		 *                             &lt;simpleType&gt;
+		 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *                                 &lt;length value="21"/&gt;
+		 *                                 &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+		 *                               &lt;/restriction&gt;
+		 *                             &lt;/simpleType&gt;
+		 *                           &lt;/attribute&gt;
+		 *                         &lt;/restriction&gt;
+		 *                       &lt;/complexContent&gt;
+		 *                     &lt;/complexType&gt;
+		 *                   &lt;/element&gt;
+		 *                 &lt;/sequence&gt;
+		 *                 &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
+		 *                 &lt;attribute name="NoIdentificacion"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *                       &lt;minLength value="1"/&gt;
+		 *                       &lt;maxLength value="100"/&gt;
+		 *                       &lt;whiteSpace value="collapse"/&gt;
+		 *                       &lt;pattern value="[^|]{1,100}"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *                 &lt;attribute name="Cantidad" use="required"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *                       &lt;fractionDigits value="6"/&gt;
+		 *                       &lt;minInclusive value="0.000001"/&gt;
+		 *                       &lt;whiteSpace value="collapse"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *                 &lt;attribute name="Unidad"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *                       &lt;minLength value="1"/&gt;
+		 *                       &lt;maxLength value="20"/&gt;
+		 *                       &lt;whiteSpace value="collapse"/&gt;
+		 *                       &lt;pattern value="[^|]{1,20}"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *                 &lt;attribute name="Descripcion" use="required"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *                       &lt;minLength value="1"/&gt;
+		 *                       &lt;maxLength value="1000"/&gt;
+		 *                       &lt;whiteSpace value="collapse"/&gt;
+		 *                       &lt;pattern value="[^|]{1,1000}"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *                 &lt;attribute name="ValorUnitario" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *                 &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *       &lt;/sequence&gt;
+		 *       &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
+		 *       &lt;attribute name="NoIdentificacion"&gt;
+		 *         &lt;simpleType&gt;
+		 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *             &lt;whiteSpace value="collapse"/&gt;
+		 *             &lt;minLength value="1"/&gt;
+		 *             &lt;maxLength value="100"/&gt;
+		 *             &lt;pattern value="[^|]{1,100}"/&gt;
+		 *           &lt;/restriction&gt;
+		 *         &lt;/simpleType&gt;
+		 *       &lt;/attribute&gt;
+		 *       &lt;attribute name="Cantidad" use="required"&gt;
+		 *         &lt;simpleType&gt;
+		 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *             &lt;fractionDigits value="6"/&gt;
+		 *             &lt;minInclusive value="0.000001"/&gt;
+		 *             &lt;whiteSpace value="collapse"/&gt;
+		 *           &lt;/restriction&gt;
+		 *         &lt;/simpleType&gt;
+		 *       &lt;/attribute&gt;
+		 *       &lt;attribute name="ClaveUnidad" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveUnidad" /&gt;
+		 *       &lt;attribute name="Unidad"&gt;
+		 *         &lt;simpleType&gt;
+		 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *             &lt;minLength value="1"/&gt;
+		 *             &lt;maxLength value="20"/&gt;
+		 *             &lt;whiteSpace value="collapse"/&gt;
+		 *             &lt;pattern value="[^|]{1,20}"/&gt;
+		 *           &lt;/restriction&gt;
+		 *         &lt;/simpleType&gt;
+		 *       &lt;/attribute&gt;
+		 *       &lt;attribute name="Descripcion" use="required"&gt;
+		 *         &lt;simpleType&gt;
+		 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+		 *             &lt;minLength value="1"/&gt;
+		 *             &lt;maxLength value="1000"/&gt;
+		 *             &lt;whiteSpace value="collapse"/&gt;
+		 *             &lt;pattern value="[^|]{1,1000}"/&gt;
+		 *           &lt;/restriction&gt;
+		 *         &lt;/simpleType&gt;
+		 *       &lt;/attribute&gt;
+		 *       &lt;attribute name="ValorUnitario" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *       &lt;attribute name="Descuento" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *     &lt;/restriction&gt;
+		 *   &lt;/complexContent&gt;
+		 * &lt;/complexType&gt;
+		 * </pre>
+		 * 
+		 * 
+		 */
+		@XmlAccessorType(XmlAccessType.FIELD)
+		@XmlType(name = "", propOrder = { "impuestos", "informacionAduanera", "cuentaPredial", "complementoConcepto",
+				"parte" })
+		public static class Concepto {
+
+			@XmlElement(name = "Impuestos", namespace = "http://www.sat.gob.mx/cfd/3")
+			protected Comprobante.Conceptos.Concepto.Impuestos impuestos;
+			@XmlElement(name = "InformacionAduanera", namespace = "http://www.sat.gob.mx/cfd/3")
+			protected List<Comprobante.Conceptos.Concepto.InformacionAduanera> informacionAduanera;
+			@XmlElement(name = "CuentaPredial", namespace = "http://www.sat.gob.mx/cfd/3")
+			protected Comprobante.Conceptos.Concepto.CuentaPredial cuentaPredial;
+			@XmlElement(name = "ComplementoConcepto", namespace = "http://www.sat.gob.mx/cfd/3")
+			protected Comprobante.Conceptos.Concepto.ComplementoConcepto complementoConcepto;
+			@XmlElement(name = "Parte", namespace = "http://www.sat.gob.mx/cfd/3")
+			protected List<Comprobante.Conceptos.Concepto.Parte> parte;
+			@XmlAttribute(name = "ClaveProdServ", required = true)
+			protected String claveProdServ;
+			@XmlAttribute(name = "NoIdentificacion")
+			protected String noIdentificacion;
+			@XmlAttribute(name = "Cantidad", required = true)
+			protected BigDecimal cantidad;
+			@XmlAttribute(name = "ClaveUnidad", required = true)
+			protected CClaveUnidad claveUnidad;
+			@XmlAttribute(name = "Unidad")
+			protected String unidad;
+			@XmlAttribute(name = "Descripcion", required = true)
+			protected String descripcion;
+			@XmlAttribute(name = "ValorUnitario", required = true)
+			protected BigDecimal valorUnitario;
+			@XmlAttribute(name = "Importe", required = true)
+			protected BigDecimal importe;
+			@XmlAttribute(name = "Descuento")
+			protected BigDecimal descuento;
+
+			/**
+			 * Gets the value of the impuestos property.
+			 * 
+			 * @return possible object is {@link Comprobante.Conceptos.Concepto.Impuestos }
+			 * 
+			 */
+			public Comprobante.Conceptos.Concepto.Impuestos getImpuestos() {
+				return impuestos;
+			}
+
+			/**
+			 * Sets the value of the impuestos property.
+			 * 
+			 * @param value
+			 *            allowed object is
+			 *            {@link Comprobante.Conceptos.Concepto.Impuestos }
+			 * 
+			 */
+			public void setImpuestos(Comprobante.Conceptos.Concepto.Impuestos value) {
+				this.impuestos = value;
+			}
+
+			/**
+			 * Gets the value of the informacionAduanera property.
+			 * 
+			 * <p>
+			 * This accessor method returns a reference to the live list, not a snapshot.
+			 * Therefore any modification you make to the returned list will be present
+			 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+			 * for the informacionAduanera property.
+			 * 
+			 * <p>
+			 * For example, to add a new item, do as follows:
+			 * 
+			 * <pre>
+			 * getInformacionAduanera().add(newItem);
+			 * </pre>
+			 * 
+			 * 
+			 * <p>
+			 * Objects of the following type(s) are allowed in the list
+			 * {@link Comprobante.Conceptos.Concepto.InformacionAduanera }
+			 * 
+			 * 
+			 */
+			public List<Comprobante.Conceptos.Concepto.InformacionAduanera> getInformacionAduanera() {
+				if (informacionAduanera == null) {
+					informacionAduanera = new ArrayList<Comprobante.Conceptos.Concepto.InformacionAduanera>();
+				}
+				return this.informacionAduanera;
+			}
+
+			/**
+			 * Gets the value of the cuentaPredial property.
+			 * 
+			 * @return possible object is
+			 *         {@link Comprobante.Conceptos.Concepto.CuentaPredial }
+			 * 
+			 */
+			public Comprobante.Conceptos.Concepto.CuentaPredial getCuentaPredial() {
+				return cuentaPredial;
+			}
+
+			/**
+			 * Sets the value of the cuentaPredial property.
+			 * 
+			 * @param value
+			 *            allowed object is
+			 *            {@link Comprobante.Conceptos.Concepto.CuentaPredial }
+			 * 
+			 */
+			public void setCuentaPredial(Comprobante.Conceptos.Concepto.CuentaPredial value) {
+				this.cuentaPredial = value;
+			}
+
+			/**
+			 * Gets the value of the complementoConcepto property.
+			 * 
+			 * @return possible object is
+			 *         {@link Comprobante.Conceptos.Concepto.ComplementoConcepto }
+			 * 
+			 */
+			public Comprobante.Conceptos.Concepto.ComplementoConcepto getComplementoConcepto() {
+				return complementoConcepto;
+			}
+
+			/**
+			 * Sets the value of the complementoConcepto property.
+			 * 
+			 * @param value
+			 *            allowed object is
+			 *            {@link Comprobante.Conceptos.Concepto.ComplementoConcepto }
+			 * 
+			 */
+			public void setComplementoConcepto(Comprobante.Conceptos.Concepto.ComplementoConcepto value) {
+				this.complementoConcepto = value;
+			}
+
+			/**
+			 * Gets the value of the parte property.
+			 * 
+			 * <p>
+			 * This accessor method returns a reference to the live list, not a snapshot.
+			 * Therefore any modification you make to the returned list will be present
+			 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+			 * for the parte property.
+			 * 
+			 * <p>
+			 * For example, to add a new item, do as follows:
+			 * 
+			 * <pre>
+			 * getParte().add(newItem);
+			 * </pre>
+			 * 
+			 * 
+			 * <p>
+			 * Objects of the following type(s) are allowed in the list
+			 * {@link Comprobante.Conceptos.Concepto.Parte }
+			 * 
+			 * 
+			 */
+			public List<Comprobante.Conceptos.Concepto.Parte> getParte() {
+				if (parte == null) {
+					parte = new ArrayList<Comprobante.Conceptos.Concepto.Parte>();
+				}
+				return this.parte;
+			}
+
+			/**
+			 * Gets the value of the claveProdServ property.
+			 * 
+			 * @return possible object is {@link String }
+			 * 
+			 */
+			public String getClaveProdServ() {
+				return claveProdServ;
+			}
+
+			/**
+			 * Sets the value of the claveProdServ property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link String }
+			 * 
+			 */
+			public void setClaveProdServ(String value) {
+				this.claveProdServ = value;
+			}
+
+			/**
+			 * Gets the value of the noIdentificacion property.
+			 * 
+			 * @return possible object is {@link String }
+			 * 
+			 */
+			public String getNoIdentificacion() {
+				return noIdentificacion;
+			}
+
+			/**
+			 * Sets the value of the noIdentificacion property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link String }
+			 * 
+			 */
+			public void setNoIdentificacion(String value) {
+				this.noIdentificacion = value;
+			}
+
+			/**
+			 * Gets the value of the cantidad property.
+			 * 
+			 * @return possible object is {@link BigDecimal }
+			 * 
+			 */
+			public BigDecimal getCantidad() {
+				return cantidad;
+			}
+
+			/**
+			 * Sets the value of the cantidad property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link BigDecimal }
+			 * 
+			 */
+			public void setCantidad(BigDecimal value) {
+				this.cantidad = value;
+			}
+
+			/**
+			 * Gets the value of the claveUnidad property.
+			 * 
+			 * @return possible object is {@link String }
+			 * 
+			 */
+			public CClaveUnidad getClaveUnidad() {
+				return claveUnidad;
+			}
+
+			/**
+			 * Sets the value of the claveUnidad property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link String }
+			 * 
+			 */
+			public void setClaveUnidad(CClaveUnidad value) {
+				this.claveUnidad = value;
+			}
+
+			/**
+			 * Gets the value of the unidad property.
+			 * 
+			 * @return possible object is {@link String }
+			 * 
+			 */
+			public String getUnidad() {
+				return unidad;
+			}
+
+			/**
+			 * Sets the value of the unidad property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link String }
+			 * 
+			 */
+			public void setUnidad(String value) {
+				this.unidad = value;
+			}
+
+			/**
+			 * Gets the value of the descripcion property.
+			 * 
+			 * @return possible object is {@link String }
+			 * 
+			 */
+			public String getDescripcion() {
+				return descripcion;
+			}
+
+			/**
+			 * Sets the value of the descripcion property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link String }
+			 * 
+			 */
+			public void setDescripcion(String value) {
+				this.descripcion = value;
+			}
+
+			/**
+			 * Gets the value of the valorUnitario property.
+			 * 
+			 * @return possible object is {@link BigDecimal }
+			 * 
+			 */
+			public BigDecimal getValorUnitario() {
+				return valorUnitario;
+			}
+
+			/**
+			 * Sets the value of the valorUnitario property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link BigDecimal }
+			 * 
+			 */
+			public void setValorUnitario(BigDecimal value) {
+				this.valorUnitario = value;
+			}
+
+			/**
+			 * Gets the value of the importe property.
+			 * 
+			 * @return possible object is {@link BigDecimal }
+			 * 
+			 */
+			public BigDecimal getImporte() {
+				return importe;
+			}
+
+			/**
+			 * Sets the value of the importe property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link BigDecimal }
+			 * 
+			 */
+			public void setImporte(BigDecimal value) {
+				this.importe = value;
+			}
+
+			/**
+			 * Gets the value of the descuento property.
+			 * 
+			 * @return possible object is {@link BigDecimal }
+			 * 
+			 */
+			public BigDecimal getDescuento() {
+				return descuento;
+			}
+
+			/**
+			 * Sets the value of the descuento property.
+			 * 
+			 * @param value
+			 *            allowed object is {@link BigDecimal }
+			 * 
+			 */
+			public void setDescuento(BigDecimal value) {
+				this.descuento = value;
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;sequence&gt;
+			 *         &lt;any maxOccurs="unbounded"/&gt;
+			 *       &lt;/sequence&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "", propOrder = { "any" })
+			public static class ComplementoConcepto {
+
+				@XmlAnyElement(lax = true)
+				protected List<Object> any;
+
+				/**
+				 * Gets the value of the any property.
+				 * 
+				 * <p>
+				 * This accessor method returns a reference to the live list, not a snapshot.
+				 * Therefore any modification you make to the returned list will be present
+				 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+				 * for the any property.
+				 * 
+				 * <p>
+				 * For example, to add a new item, do as follows:
+				 * 
+				 * <pre>
+				 * getAny().add(newItem);
+				 * </pre>
+				 * 
+				 * 
+				 * <p>
+				 * Objects of the following type(s) are allowed in the list {@link Object }
+				 * 
+				 * 
+				 */
+				public List<Object> getAny() {
+					if (any == null) {
+						any = new ArrayList<Object>();
+					}
+					return this.any;
+				}
+
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;attribute name="Numero" use="required"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+			 *             &lt;minLength value="1"/&gt;
+			 *             &lt;maxLength value="150"/&gt;
+			 *             &lt;whiteSpace value="collapse"/&gt;
+			 *             &lt;pattern value="[0-9]{1,150}"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "")
+			public static class CuentaPredial {
+
+				@XmlAttribute(name = "Numero", required = true)
+				protected String numero;
+
+				/**
+				 * Gets the value of the numero property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getNumero() {
+					return numero;
+				}
+
+				/**
+				 * Sets the value of the numero property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setNumero(String value) {
+					this.numero = value;
+				}
+
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;sequence&gt;
+			 *         &lt;element name="Traslados" minOccurs="0"&gt;
+			 *           &lt;complexType&gt;
+			 *             &lt;complexContent&gt;
+			 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *                 &lt;sequence&gt;
+			 *                   &lt;element name="Traslado" maxOccurs="unbounded"&gt;
+			 *                     &lt;complexType&gt;
+			 *                       &lt;complexContent&gt;
+			 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *                           &lt;attribute name="Base" use="required"&gt;
+			 *                             &lt;simpleType&gt;
+			 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+			 *                                 &lt;fractionDigits value="6"/&gt;
+			 *                                 &lt;minInclusive value="0.000001"/&gt;
+			 *                                 &lt;whiteSpace value="collapse"/&gt;
+			 *                               &lt;/restriction&gt;
+			 *                             &lt;/simpleType&gt;
+			 *                           &lt;/attribute&gt;
+			 *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+			 *                           &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+			 *                           &lt;attribute name="TasaOCuota"&gt;
+			 *                             &lt;simpleType&gt;
+			 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+			 *                                 &lt;fractionDigits value="6"/&gt;
+			 *                                 &lt;minInclusive value="0.000000"/&gt;
+			 *                                 &lt;whiteSpace value="collapse"/&gt;
+			 *                               &lt;/restriction&gt;
+			 *                             &lt;/simpleType&gt;
+			 *                           &lt;/attribute&gt;
+			 *                           &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+			 *                         &lt;/restriction&gt;
+			 *                       &lt;/complexContent&gt;
+			 *                     &lt;/complexType&gt;
+			 *                   &lt;/element&gt;
+			 *                 &lt;/sequence&gt;
+			 *               &lt;/restriction&gt;
+			 *             &lt;/complexContent&gt;
+			 *           &lt;/complexType&gt;
+			 *         &lt;/element&gt;
+			 *         &lt;element name="Retenciones" minOccurs="0"&gt;
+			 *           &lt;complexType&gt;
+			 *             &lt;complexContent&gt;
+			 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *                 &lt;sequence&gt;
+			 *                   &lt;element name="Retencion" maxOccurs="unbounded"&gt;
+			 *                     &lt;complexType&gt;
+			 *                       &lt;complexContent&gt;
+			 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *                           &lt;attribute name="Base" use="required"&gt;
+			 *                             &lt;simpleType&gt;
+			 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+			 *                                 &lt;fractionDigits value="6"/&gt;
+			 *                                 &lt;minInclusive value="0.000001"/&gt;
+			 *                                 &lt;whiteSpace value="collapse"/&gt;
+			 *                               &lt;/restriction&gt;
+			 *                             &lt;/simpleType&gt;
+			 *                           &lt;/attribute&gt;
+			 *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+			 *                           &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+			 *                           &lt;attribute name="TasaOCuota" use="required"&gt;
+			 *                             &lt;simpleType&gt;
+			 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+			 *                                 &lt;whiteSpace value="collapse"/&gt;
+			 *                                 &lt;minInclusive value="0.000000"/&gt;
+			 *                                 &lt;fractionDigits value="6"/&gt;
+			 *                               &lt;/restriction&gt;
+			 *                             &lt;/simpleType&gt;
+			 *                           &lt;/attribute&gt;
+			 *                           &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+			 *                         &lt;/restriction&gt;
+			 *                       &lt;/complexContent&gt;
+			 *                     &lt;/complexType&gt;
+			 *                   &lt;/element&gt;
+			 *                 &lt;/sequence&gt;
+			 *               &lt;/restriction&gt;
+			 *             &lt;/complexContent&gt;
+			 *           &lt;/complexType&gt;
+			 *         &lt;/element&gt;
+			 *       &lt;/sequence&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "", propOrder = { "traslados", "retenciones" })
+			public static class Impuestos {
+
+				@XmlElement(name = "Traslados", namespace = "http://www.sat.gob.mx/cfd/3")
+				protected Comprobante.Conceptos.Concepto.Impuestos.Traslados traslados;
+				@XmlElement(name = "Retenciones", namespace = "http://www.sat.gob.mx/cfd/3")
+				protected Comprobante.Conceptos.Concepto.Impuestos.Retenciones retenciones;
+
+				/**
+				 * Gets the value of the traslados property.
+				 * 
+				 * @return possible object is
+				 *         {@link Comprobante.Conceptos.Concepto.Impuestos.Traslados }
+				 * 
+				 */
+				public Comprobante.Conceptos.Concepto.Impuestos.Traslados getTraslados() {
+					return traslados;
+				}
+
+				/**
+				 * Sets the value of the traslados property.
+				 * 
+				 * @param value
+				 *            allowed object is
+				 *            {@link Comprobante.Conceptos.Concepto.Impuestos.Traslados }
+				 * 
+				 */
+				public void setTraslados(Comprobante.Conceptos.Concepto.Impuestos.Traslados value) {
+					this.traslados = value;
+				}
+
+				/**
+				 * Gets the value of the retenciones property.
+				 * 
+				 * @return possible object is
+				 *         {@link Comprobante.Conceptos.Concepto.Impuestos.Retenciones }
+				 * 
+				 */
+				public Comprobante.Conceptos.Concepto.Impuestos.Retenciones getRetenciones() {
+					return retenciones;
+				}
+
+				/**
+				 * Sets the value of the retenciones property.
+				 * 
+				 * @param value
+				 *            allowed object is
+				 *            {@link Comprobante.Conceptos.Concepto.Impuestos.Retenciones }
+				 * 
+				 */
+				public void setRetenciones(Comprobante.Conceptos.Concepto.Impuestos.Retenciones value) {
+					this.retenciones = value;
+				}
+
+				/**
+				 * <p>
+				 * Java class for anonymous complex type.
+				 * 
+				 * <p>
+				 * The following schema fragment specifies the expected content contained within
+				 * this class.
+				 * 
+				 * <pre>
+				 * &lt;complexType&gt;
+				 *   &lt;complexContent&gt;
+				 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+				 *       &lt;sequence&gt;
+				 *         &lt;element name="Retencion" maxOccurs="unbounded"&gt;
+				 *           &lt;complexType&gt;
+				 *             &lt;complexContent&gt;
+				 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+				 *                 &lt;attribute name="Base" use="required"&gt;
+				 *                   &lt;simpleType&gt;
+				 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+				 *                       &lt;fractionDigits value="6"/&gt;
+				 *                       &lt;minInclusive value="0.000001"/&gt;
+				 *                       &lt;whiteSpace value="collapse"/&gt;
+				 *                     &lt;/restriction&gt;
+				 *                   &lt;/simpleType&gt;
+				 *                 &lt;/attribute&gt;
+				 *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+				 *                 &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+				 *                 &lt;attribute name="TasaOCuota" use="required"&gt;
+				 *                   &lt;simpleType&gt;
+				 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+				 *                       &lt;whiteSpace value="collapse"/&gt;
+				 *                       &lt;minInclusive value="0.000000"/&gt;
+				 *                       &lt;fractionDigits value="6"/&gt;
+				 *                     &lt;/restriction&gt;
+				 *                   &lt;/simpleType&gt;
+				 *                 &lt;/attribute&gt;
+				 *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+				 *               &lt;/restriction&gt;
+				 *             &lt;/complexContent&gt;
+				 *           &lt;/complexType&gt;
+				 *         &lt;/element&gt;
+				 *       &lt;/sequence&gt;
+				 *     &lt;/restriction&gt;
+				 *   &lt;/complexContent&gt;
+				 * &lt;/complexType&gt;
+				 * </pre>
+				 * 
+				 * 
+				 */
+				@XmlAccessorType(XmlAccessType.FIELD)
+				@XmlType(name = "", propOrder = { "retencion" })
+				public static class Retenciones {
+
+					@XmlElement(name = "Retencion", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+					protected List<Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion> retencion;
+
+					/**
+					 * Gets the value of the retencion property.
+					 * 
+					 * <p>
+					 * This accessor method returns a reference to the live list, not a snapshot.
+					 * Therefore any modification you make to the returned list will be present
+					 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+					 * for the retencion property.
+					 * 
+					 * <p>
+					 * For example, to add a new item, do as follows:
+					 * 
+					 * <pre>
+					 * getRetencion().add(newItem);
+					 * </pre>
+					 * 
+					 * 
+					 * <p>
+					 * Objects of the following type(s) are allowed in the list
+					 * {@link Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion }
+					 * 
+					 * 
+					 */
+					public List<Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion> getRetencion() {
+						if (retencion == null) {
+							retencion = new ArrayList<Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion>();
+						}
+						return this.retencion;
+					}
+
+					/**
+					 * <p>
+					 * Java class for anonymous complex type.
+					 * 
+					 * <p>
+					 * The following schema fragment specifies the expected content contained within
+					 * this class.
+					 * 
+					 * <pre>
+					 * &lt;complexType&gt;
+					 *   &lt;complexContent&gt;
+					 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+					 *       &lt;attribute name="Base" use="required"&gt;
+					 *         &lt;simpleType&gt;
+					 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+					 *             &lt;fractionDigits value="6"/&gt;
+					 *             &lt;minInclusive value="0.000001"/&gt;
+					 *             &lt;whiteSpace value="collapse"/&gt;
+					 *           &lt;/restriction&gt;
+					 *         &lt;/simpleType&gt;
+					 *       &lt;/attribute&gt;
+					 *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+					 *       &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+					 *       &lt;attribute name="TasaOCuota" use="required"&gt;
+					 *         &lt;simpleType&gt;
+					 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+					 *             &lt;whiteSpace value="collapse"/&gt;
+					 *             &lt;minInclusive value="0.000000"/&gt;
+					 *             &lt;fractionDigits value="6"/&gt;
+					 *           &lt;/restriction&gt;
+					 *         &lt;/simpleType&gt;
+					 *       &lt;/attribute&gt;
+					 *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+					 *     &lt;/restriction&gt;
+					 *   &lt;/complexContent&gt;
+					 * &lt;/complexType&gt;
+					 * </pre>
+					 * 
+					 * 
+					 */
+					@XmlAccessorType(XmlAccessType.FIELD)
+					@XmlType(name = "")
+					public static class Retencion {
+
+						@XmlAttribute(name = "Base", required = true)
+						protected BigDecimal base;
+						@XmlAttribute(name = "Impuesto", required = true)
+						protected CImpuesto impuesto;
+						@XmlAttribute(name = "TipoFactor", required = true)
+						protected CTipoFactor tipoFactor;
+						@XmlAttribute(name = "TasaOCuota", required = true)
+						protected BigDecimal tasaOCuota;
+						@XmlAttribute(name = "Importe", required = true)
+						protected BigDecimal importe;
+
+						/**
+						 * Gets the value of the base property.
+						 * 
+						 * @return possible object is {@link BigDecimal }
+						 * 
+						 */
+						public BigDecimal getBase() {
+							return base;
+						}
+
+						/**
+						 * Sets the value of the base property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link BigDecimal }
+						 * 
+						 */
+						public void setBase(BigDecimal value) {
+							this.base = value;
+						}
+
+						/**
+						 * Gets the value of the impuesto property.
+						 * 
+						 * @return possible object is {@link String }
+						 * 
+						 */
+						public CImpuesto getImpuesto() {
+							return impuesto;
+						}
+
+						/**
+						 * Sets the value of the impuesto property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link String }
+						 * 
+						 */
+						public void setImpuesto(CImpuesto value) {
+							this.impuesto = value;
+						}
+
+						/**
+						 * Gets the value of the tipoFactor property.
+						 * 
+						 * @return possible object is {@link CTipoFactor }
+						 * 
+						 */
+						public CTipoFactor getTipoFactor() {
+							return tipoFactor;
+						}
+
+						/**
+						 * Sets the value of the tipoFactor property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link CTipoFactor }
+						 * 
+						 */
+						public void setTipoFactor(CTipoFactor value) {
+							this.tipoFactor = value;
+						}
+
+						/**
+						 * Gets the value of the tasaOCuota property.
+						 * 
+						 * @return possible object is {@link BigDecimal }
+						 * 
+						 */
+						public BigDecimal getTasaOCuota() {
+							return tasaOCuota;
+						}
+
+						/**
+						 * Sets the value of the tasaOCuota property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link BigDecimal }
+						 * 
+						 */
+						public void setTasaOCuota(BigDecimal value) {
+							this.tasaOCuota = value;
+						}
+
+						/**
+						 * Gets the value of the importe property.
+						 * 
+						 * @return possible object is {@link BigDecimal }
+						 * 
+						 */
+						public BigDecimal getImporte() {
+							return importe;
+						}
+
+						/**
+						 * Sets the value of the importe property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link BigDecimal }
+						 * 
+						 */
+						public void setImporte(BigDecimal value) {
+							this.importe = value;
+						}
+
+					}
+
+				}
+
+				/**
+				 * <p>
+				 * Java class for anonymous complex type.
+				 * 
+				 * <p>
+				 * The following schema fragment specifies the expected content contained within
+				 * this class.
+				 * 
+				 * <pre>
+				 * &lt;complexType&gt;
+				 *   &lt;complexContent&gt;
+				 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+				 *       &lt;sequence&gt;
+				 *         &lt;element name="Traslado" maxOccurs="unbounded"&gt;
+				 *           &lt;complexType&gt;
+				 *             &lt;complexContent&gt;
+				 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+				 *                 &lt;attribute name="Base" use="required"&gt;
+				 *                   &lt;simpleType&gt;
+				 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+				 *                       &lt;fractionDigits value="6"/&gt;
+				 *                       &lt;minInclusive value="0.000001"/&gt;
+				 *                       &lt;whiteSpace value="collapse"/&gt;
+				 *                     &lt;/restriction&gt;
+				 *                   &lt;/simpleType&gt;
+				 *                 &lt;/attribute&gt;
+				 *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+				 *                 &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+				 *                 &lt;attribute name="TasaOCuota"&gt;
+				 *                   &lt;simpleType&gt;
+				 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+				 *                       &lt;fractionDigits value="6"/&gt;
+				 *                       &lt;minInclusive value="0.000000"/&gt;
+				 *                       &lt;whiteSpace value="collapse"/&gt;
+				 *                     &lt;/restriction&gt;
+				 *                   &lt;/simpleType&gt;
+				 *                 &lt;/attribute&gt;
+				 *                 &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+				 *               &lt;/restriction&gt;
+				 *             &lt;/complexContent&gt;
+				 *           &lt;/complexType&gt;
+				 *         &lt;/element&gt;
+				 *       &lt;/sequence&gt;
+				 *     &lt;/restriction&gt;
+				 *   &lt;/complexContent&gt;
+				 * &lt;/complexType&gt;
+				 * </pre>
+				 * 
+				 * 
+				 */
+				@XmlAccessorType(XmlAccessType.FIELD)
+				@XmlType(name = "", propOrder = { "traslado" })
+				public static class Traslados {
+
+					@XmlElement(name = "Traslado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+					protected List<Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado> traslado;
+
+					/**
+					 * Gets the value of the traslado property.
+					 * 
+					 * <p>
+					 * This accessor method returns a reference to the live list, not a snapshot.
+					 * Therefore any modification you make to the returned list will be present
+					 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+					 * for the traslado property.
+					 * 
+					 * <p>
+					 * For example, to add a new item, do as follows:
+					 * 
+					 * <pre>
+					 * getTraslado().add(newItem);
+					 * </pre>
+					 * 
+					 * 
+					 * <p>
+					 * Objects of the following type(s) are allowed in the list
+					 * {@link Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado }
+					 * 
+					 * 
+					 */
+					public List<Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado> getTraslado() {
+						if (traslado == null) {
+							traslado = new ArrayList<Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado>();
+						}
+						return this.traslado;
+					}
+
+					/**
+					 * <p>
+					 * Java class for anonymous complex type.
+					 * 
+					 * <p>
+					 * The following schema fragment specifies the expected content contained within
+					 * this class.
+					 * 
+					 * <pre>
+					 * &lt;complexType&gt;
+					 *   &lt;complexContent&gt;
+					 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+					 *       &lt;attribute name="Base" use="required"&gt;
+					 *         &lt;simpleType&gt;
+					 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+					 *             &lt;fractionDigits value="6"/&gt;
+					 *             &lt;minInclusive value="0.000001"/&gt;
+					 *             &lt;whiteSpace value="collapse"/&gt;
+					 *           &lt;/restriction&gt;
+					 *         &lt;/simpleType&gt;
+					 *       &lt;/attribute&gt;
+					 *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+					 *       &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+					 *       &lt;attribute name="TasaOCuota"&gt;
+					 *         &lt;simpleType&gt;
+					 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+					 *             &lt;fractionDigits value="6"/&gt;
+					 *             &lt;minInclusive value="0.000000"/&gt;
+					 *             &lt;whiteSpace value="collapse"/&gt;
+					 *           &lt;/restriction&gt;
+					 *         &lt;/simpleType&gt;
+					 *       &lt;/attribute&gt;
+					 *       &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+					 *     &lt;/restriction&gt;
+					 *   &lt;/complexContent&gt;
+					 * &lt;/complexType&gt;
+					 * </pre>
+					 * 
+					 * 
+					 */
+					@XmlAccessorType(XmlAccessType.FIELD)
+					@XmlType(name = "")
+					public static class Traslado {
+
+						@XmlAttribute(name = "Base", required = true)
+						protected BigDecimal base;
+						@XmlAttribute(name = "Impuesto", required = true)
+						protected String impuesto;
+						@XmlAttribute(name = "TipoFactor", required = true)
+						protected CTipoFactor tipoFactor;
+						@XmlAttribute(name = "TasaOCuota")
+						protected BigDecimal tasaOCuota;
+						@XmlAttribute(name = "Importe")
+						protected BigDecimal importe;
+
+						/**
+						 * Gets the value of the base property.
+						 * 
+						 * @return possible object is {@link BigDecimal }
+						 * 
+						 */
+						public BigDecimal getBase() {
+							return base;
+						}
+
+						/**
+						 * Sets the value of the base property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link BigDecimal }
+						 * 
+						 */
+						public void setBase(BigDecimal value) {
+							this.base = value;
+						}
+
+						/**
+						 * Gets the value of the impuesto property.
+						 * 
+						 * @return possible object is {@link String }
+						 * 
+						 */
+						public String getImpuesto() {
+							return impuesto;
+						}
+
+						/**
+						 * Sets the value of the impuesto property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link String }
+						 * 
+						 */
+						public void setImpuesto(String value) {
+							this.impuesto = value;
+						}
+
+						/**
+						 * Gets the value of the tipoFactor property.
+						 * 
+						 * @return possible object is {@link CTipoFactor }
+						 * 
+						 */
+						public CTipoFactor getTipoFactor() {
+							return tipoFactor;
+						}
+
+						/**
+						 * Sets the value of the tipoFactor property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link CTipoFactor }
+						 * 
+						 */
+						public void setTipoFactor(CTipoFactor value) {
+							this.tipoFactor = value;
+						}
+
+						/**
+						 * Gets the value of the tasaOCuota property.
+						 * 
+						 * @return possible object is {@link BigDecimal }
+						 * 
+						 */
+						public BigDecimal getTasaOCuota() {
+							return tasaOCuota;
+						}
+
+						/**
+						 * Sets the value of the tasaOCuota property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link BigDecimal }
+						 * 
+						 */
+						public void setTasaOCuota(BigDecimal value) {
+							this.tasaOCuota = value;
+						}
+
+						/**
+						 * Gets the value of the importe property.
+						 * 
+						 * @return possible object is {@link BigDecimal }
+						 * 
+						 */
+						public BigDecimal getImporte() {
+							return importe;
+						}
+
+						/**
+						 * Sets the value of the importe property.
+						 * 
+						 * @param value
+						 *            allowed object is {@link BigDecimal }
+						 * 
+						 */
+						public void setImporte(BigDecimal value) {
+							this.importe = value;
+						}
+
+					}
+
+				}
+
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;attribute name="NumeroPedimento" use="required"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+			 *             &lt;length value="21"/&gt;
+			 *             &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "")
+			public static class InformacionAduanera {
+
+				@XmlAttribute(name = "NumeroPedimento", required = true)
+				protected String numeroPedimento;
+
+				/**
+				 * Gets the value of the numeroPedimento property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getNumeroPedimento() {
+					return numeroPedimento;
+				}
+
+				/**
+				 * Sets the value of the numeroPedimento property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setNumeroPedimento(String value) {
+					this.numeroPedimento = value;
+				}
+
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;sequence&gt;
+			 *         &lt;element name="InformacionAduanera" maxOccurs="unbounded" minOccurs="0"&gt;
+			 *           &lt;complexType&gt;
+			 *             &lt;complexContent&gt;
+			 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *                 &lt;attribute name="NumeroPedimento" use="required"&gt;
+			 *                   &lt;simpleType&gt;
+			 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+			 *                       &lt;length value="21"/&gt;
+			 *                       &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+			 *                     &lt;/restriction&gt;
+			 *                   &lt;/simpleType&gt;
+			 *                 &lt;/attribute&gt;
+			 *               &lt;/restriction&gt;
+			 *             &lt;/complexContent&gt;
+			 *           &lt;/complexType&gt;
+			 *         &lt;/element&gt;
+			 *       &lt;/sequence&gt;
+			 *       &lt;attribute name="ClaveProdServ" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_ClaveProdServ" /&gt;
+			 *       &lt;attribute name="NoIdentificacion"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+			 *             &lt;minLength value="1"/&gt;
+			 *             &lt;maxLength value="100"/&gt;
+			 *             &lt;whiteSpace value="collapse"/&gt;
+			 *             &lt;pattern value="[^|]{1,100}"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *       &lt;attribute name="Cantidad" use="required"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+			 *             &lt;fractionDigits value="6"/&gt;
+			 *             &lt;minInclusive value="0.000001"/&gt;
+			 *             &lt;whiteSpace value="collapse"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *       &lt;attribute name="Unidad"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+			 *             &lt;minLength value="1"/&gt;
+			 *             &lt;maxLength value="20"/&gt;
+			 *             &lt;whiteSpace value="collapse"/&gt;
+			 *             &lt;pattern value="[^|]{1,20}"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *       &lt;attribute name="Descripcion" use="required"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+			 *             &lt;minLength value="1"/&gt;
+			 *             &lt;maxLength value="1000"/&gt;
+			 *             &lt;whiteSpace value="collapse"/&gt;
+			 *             &lt;pattern value="[^|]{1,1000}"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *       &lt;attribute name="ValorUnitario" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+			 *       &lt;attribute name="Importe" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "", propOrder = { "informacionAduanera" })
+			public static class Parte {
+
+				@XmlElement(name = "InformacionAduanera", namespace = "http://www.sat.gob.mx/cfd/3")
+				protected List<Comprobante.Conceptos.Concepto.Parte.InformacionAduanera> informacionAduanera;
+				@XmlAttribute(name = "ClaveProdServ", required = true)
+				protected String claveProdServ;
+				@XmlAttribute(name = "NoIdentificacion")
+				protected String noIdentificacion;
+				@XmlAttribute(name = "Cantidad", required = true)
+				protected BigDecimal cantidad;
+				@XmlAttribute(name = "Unidad")
+				protected String unidad;
+				@XmlAttribute(name = "Descripcion", required = true)
+				protected String descripcion;
+				@XmlAttribute(name = "ValorUnitario")
+				protected BigDecimal valorUnitario;
+				@XmlAttribute(name = "Importe")
+				protected BigDecimal importe;
+
+				/**
+				 * Gets the value of the informacionAduanera property.
+				 * 
+				 * <p>
+				 * This accessor method returns a reference to the live list, not a snapshot.
+				 * Therefore any modification you make to the returned list will be present
+				 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+				 * for the informacionAduanera property.
+				 * 
+				 * <p>
+				 * For example, to add a new item, do as follows:
+				 * 
+				 * <pre>
+				 * getInformacionAduanera().add(newItem);
+				 * </pre>
+				 * 
+				 * 
+				 * <p>
+				 * Objects of the following type(s) are allowed in the list
+				 * {@link Comprobante.Conceptos.Concepto.Parte.InformacionAduanera }
+				 * 
+				 * 
+				 */
+				public List<Comprobante.Conceptos.Concepto.Parte.InformacionAduanera> getInformacionAduanera() {
+					if (informacionAduanera == null) {
+						informacionAduanera = new ArrayList<Comprobante.Conceptos.Concepto.Parte.InformacionAduanera>();
+					}
+					return this.informacionAduanera;
+				}
+
+				/**
+				 * Gets the value of the claveProdServ property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getClaveProdServ() {
+					return claveProdServ;
+				}
+
+				/**
+				 * Sets the value of the claveProdServ property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setClaveProdServ(String value) {
+					this.claveProdServ = value;
+				}
+
+				/**
+				 * Gets the value of the noIdentificacion property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getNoIdentificacion() {
+					return noIdentificacion;
+				}
+
+				/**
+				 * Sets the value of the noIdentificacion property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setNoIdentificacion(String value) {
+					this.noIdentificacion = value;
+				}
+
+				/**
+				 * Gets the value of the cantidad property.
+				 * 
+				 * @return possible object is {@link BigDecimal }
+				 * 
+				 */
+				public BigDecimal getCantidad() {
+					return cantidad;
+				}
+
+				/**
+				 * Sets the value of the cantidad property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link BigDecimal }
+				 * 
+				 */
+				public void setCantidad(BigDecimal value) {
+					this.cantidad = value;
+				}
+
+				/**
+				 * Gets the value of the unidad property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getUnidad() {
+					return unidad;
+				}
+
+				/**
+				 * Sets the value of the unidad property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setUnidad(String value) {
+					this.unidad = value;
+				}
+
+				/**
+				 * Gets the value of the descripcion property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getDescripcion() {
+					return descripcion;
+				}
+
+				/**
+				 * Sets the value of the descripcion property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setDescripcion(String value) {
+					this.descripcion = value;
+				}
+
+				/**
+				 * Gets the value of the valorUnitario property.
+				 * 
+				 * @return possible object is {@link BigDecimal }
+				 * 
+				 */
+				public BigDecimal getValorUnitario() {
+					return valorUnitario;
+				}
+
+				/**
+				 * Sets the value of the valorUnitario property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link BigDecimal }
+				 * 
+				 */
+				public void setValorUnitario(BigDecimal value) {
+					this.valorUnitario = value;
+				}
+
+				/**
+				 * Gets the value of the importe property.
+				 * 
+				 * @return possible object is {@link BigDecimal }
+				 * 
+				 */
+				public BigDecimal getImporte() {
+					return importe;
+				}
+
+				/**
+				 * Sets the value of the importe property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link BigDecimal }
+				 * 
+				 */
+				public void setImporte(BigDecimal value) {
+					this.importe = value;
+				}
+
+				/**
+				 * <p>
+				 * Java class for anonymous complex type.
+				 * 
+				 * <p>
+				 * The following schema fragment specifies the expected content contained within
+				 * this class.
+				 * 
+				 * <pre>
+				 * &lt;complexType&gt;
+				 *   &lt;complexContent&gt;
+				 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+				 *       &lt;attribute name="NumeroPedimento" use="required"&gt;
+				 *         &lt;simpleType&gt;
+				 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+				 *             &lt;length value="21"/&gt;
+				 *             &lt;pattern value="[0-9]{2}  [0-9]{2}  [0-9]{4}  [0-9]{7}"/&gt;
+				 *           &lt;/restriction&gt;
+				 *         &lt;/simpleType&gt;
+				 *       &lt;/attribute&gt;
+				 *     &lt;/restriction&gt;
+				 *   &lt;/complexContent&gt;
+				 * &lt;/complexType&gt;
+				 * </pre>
+				 * 
+				 * 
+				 */
+				@XmlAccessorType(XmlAccessType.FIELD)
+				@XmlType(name = "")
+				public static class InformacionAduanera {
+
+					@XmlAttribute(name = "NumeroPedimento", required = true)
+					protected String numeroPedimento;
+
+					/**
+					 * Gets the value of the numeroPedimento property.
+					 * 
+					 * @return possible object is {@link String }
+					 * 
+					 */
+					public String getNumeroPedimento() {
+						return numeroPedimento;
+					}
+
+					/**
+					 * Sets the value of the numeroPedimento property.
+					 * 
+					 * @param value
+					 *            allowed object is {@link String }
+					 * 
+					 */
+					public void setNumeroPedimento(String value) {
+						this.numeroPedimento = value;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;attribute name="Rfc" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_RFC" /&gt;
+	 *       &lt;attribute name="Nombre"&gt;
+	 *         &lt;simpleType&gt;
+	 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *             &lt;minLength value="1"/&gt;
+	 *             &lt;maxLength value="254"/&gt;
+	 *             &lt;whiteSpace value="collapse"/&gt;
+	 *             &lt;pattern value="[^|]{1,254}"/&gt;
+	 *           &lt;/restriction&gt;
+	 *         &lt;/simpleType&gt;
+	 *       &lt;/attribute&gt;
+	 *       &lt;attribute name="RegimenFiscal" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_RegimenFiscal" /&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "")
+	public static class Emisor {
+
+		@XmlAttribute(name = "Rfc", required = true)
+		protected String rfc;
+		@XmlAttribute(name = "Nombre")
+		protected String nombre;
+		@XmlAttribute(name = "RegimenFiscal", required = true)
+		@XmlJavaTypeAdapter(RegimenFiscalAdapter.class)
+		protected CRegimenFiscal regimenFiscal;
+
+		/**
+		 * Gets the value of the rfc property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public String getRfc() {
+			return rfc;
+		}
+
+		/**
+		 * Sets the value of the rfc property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setRfc(String value) {
+			this.rfc = value;
+		}
+
+		/**
+		 * Gets the value of the nombre property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public String getNombre() {
+			return nombre;
+		}
+
+		/**
+		 * Sets the value of the nombre property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setNombre(String value) {
+			this.nombre = value;
+		}
+
+		/**
+		 * Gets the value of the regimenFiscal property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public CRegimenFiscal getRegimenFiscal() {
+			return regimenFiscal;
+		}
+
+		/**
+		 * Sets the value of the regimenFiscal property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setRegimenFiscal(CRegimenFiscal value) {
+			this.regimenFiscal = value;
+		}
+
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;sequence&gt;
+	 *         &lt;element name="Retenciones" minOccurs="0"&gt;
+	 *           &lt;complexType&gt;
+	 *             &lt;complexContent&gt;
+	 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                 &lt;sequence&gt;
+	 *                   &lt;element name="Retencion" maxOccurs="unbounded"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+	 *                           &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                 &lt;/sequence&gt;
+	 *               &lt;/restriction&gt;
+	 *             &lt;/complexContent&gt;
+	 *           &lt;/complexType&gt;
+	 *         &lt;/element&gt;
+	 *         &lt;element name="Traslados" minOccurs="0"&gt;
+	 *           &lt;complexType&gt;
+	 *             &lt;complexContent&gt;
+	 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                 &lt;sequence&gt;
+	 *                   &lt;element name="Traslado" maxOccurs="unbounded"&gt;
+	 *                     &lt;complexType&gt;
+	 *                       &lt;complexContent&gt;
+	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *                           &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+	 *                           &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+	 *                           &lt;attribute name="TasaOCuota" use="required"&gt;
+	 *                             &lt;simpleType&gt;
+	 *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+	 *                                 &lt;whiteSpace value="collapse"/&gt;
+	 *                                 &lt;minInclusive value="0.000000"/&gt;
+	 *                                 &lt;fractionDigits value="6"/&gt;
+	 *                               &lt;/restriction&gt;
+	 *                             &lt;/simpleType&gt;
+	 *                           &lt;/attribute&gt;
+	 *                           &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *                         &lt;/restriction&gt;
+	 *                       &lt;/complexContent&gt;
+	 *                     &lt;/complexType&gt;
+	 *                   &lt;/element&gt;
+	 *                 &lt;/sequence&gt;
+	 *               &lt;/restriction&gt;
+	 *             &lt;/complexContent&gt;
+	 *           &lt;/complexType&gt;
+	 *         &lt;/element&gt;
+	 *       &lt;/sequence&gt;
+	 *       &lt;attribute name="TotalImpuestosRetenidos" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *       &lt;attribute name="TotalImpuestosTrasladados" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "", propOrder = { "retenciones", "traslados" })
+	public static class Impuestos {
+
+		@XmlElement(name = "Retenciones", namespace = "http://www.sat.gob.mx/cfd/3")
+		protected Comprobante.Impuestos.Retenciones retenciones;
+		@XmlElement(name = "Traslados", namespace = "http://www.sat.gob.mx/cfd/3")
+		protected Comprobante.Impuestos.Traslados traslados;
+		@XmlAttribute(name = "TotalImpuestosRetenidos")
+		protected BigDecimal totalImpuestosRetenidos;
+		@XmlAttribute(name = "TotalImpuestosTrasladados")
+		protected BigDecimal totalImpuestosTrasladados;
+
+		/**
+		 * Gets the value of the retenciones property.
+		 * 
+		 * @return possible object is {@link Comprobante.Impuestos.Retenciones }
+		 * 
+		 */
+		public Comprobante.Impuestos.Retenciones getRetenciones() {
+			return retenciones;
+		}
+
+		/**
+		 * Sets the value of the retenciones property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link Comprobante.Impuestos.Retenciones }
+		 * 
+		 */
+		public void setRetenciones(Comprobante.Impuestos.Retenciones value) {
+			this.retenciones = value;
+		}
+
+		/**
+		 * Gets the value of the traslados property.
+		 * 
+		 * @return possible object is {@link Comprobante.Impuestos.Traslados }
+		 * 
+		 */
+		public Comprobante.Impuestos.Traslados getTraslados() {
+			return traslados;
+		}
+
+		/**
+		 * Sets the value of the traslados property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link Comprobante.Impuestos.Traslados }
+		 * 
+		 */
+		public void setTraslados(Comprobante.Impuestos.Traslados value) {
+			this.traslados = value;
+		}
+
+		/**
+		 * Gets the value of the totalImpuestosRetenidos property.
+		 * 
+		 * @return possible object is {@link BigDecimal }
+		 * 
+		 */
+		public BigDecimal getTotalImpuestosRetenidos() {
+			return totalImpuestosRetenidos;
+		}
+
+		/**
+		 * Sets the value of the totalImpuestosRetenidos property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link BigDecimal }
+		 * 
+		 */
+		public void setTotalImpuestosRetenidos(BigDecimal value) {
+			this.totalImpuestosRetenidos = value;
+		}
+
+		/**
+		 * Gets the value of the totalImpuestosTrasladados property.
+		 * 
+		 * @return possible object is {@link BigDecimal }
+		 * 
+		 */
+		public BigDecimal getTotalImpuestosTrasladados() {
+			return totalImpuestosTrasladados;
+		}
+
+		/**
+		 * Sets the value of the totalImpuestosTrasladados property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link BigDecimal }
+		 * 
+		 */
+		public void setTotalImpuestosTrasladados(BigDecimal value) {
+			this.totalImpuestosTrasladados = value;
+		}
+
+		/**
+		 * <p>
+		 * Java class for anonymous complex type.
+		 * 
+		 * <p>
+		 * The following schema fragment specifies the expected content contained within
+		 * this class.
+		 * 
+		 * <pre>
+		 * &lt;complexType&gt;
+		 *   &lt;complexContent&gt;
+		 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *       &lt;sequence&gt;
+		 *         &lt;element name="Retencion" maxOccurs="unbounded"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+		 *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *       &lt;/sequence&gt;
+		 *     &lt;/restriction&gt;
+		 *   &lt;/complexContent&gt;
+		 * &lt;/complexType&gt;
+		 * </pre>
+		 * 
+		 * 
+		 */
+		@XmlAccessorType(XmlAccessType.FIELD)
+		@XmlType(name = "", propOrder = { "retencion" })
+		public static class Retenciones {
+
+			@XmlElement(name = "Retencion", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+			protected List<Comprobante.Impuestos.Retenciones.Retencion> retencion;
+
+			/**
+			 * Gets the value of the retencion property.
+			 * 
+			 * <p>
+			 * This accessor method returns a reference to the live list, not a snapshot.
+			 * Therefore any modification you make to the returned list will be present
+			 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+			 * for the retencion property.
+			 * 
+			 * <p>
+			 * For example, to add a new item, do as follows:
+			 * 
+			 * <pre>
+			 * getRetencion().add(newItem);
+			 * </pre>
+			 * 
+			 * 
+			 * <p>
+			 * Objects of the following type(s) are allowed in the list
+			 * {@link Comprobante.Impuestos.Retenciones.Retencion }
+			 * 
+			 * 
+			 */
+			public List<Comprobante.Impuestos.Retenciones.Retencion> getRetencion() {
+				if (retencion == null) {
+					retencion = new ArrayList<Comprobante.Impuestos.Retenciones.Retencion>();
+				}
+				return this.retencion;
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+			 *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "")
+			public static class Retencion {
+
+				@XmlAttribute(name = "Impuesto", required = true)
+				protected String impuesto;
+				@XmlAttribute(name = "Importe", required = true)
+				protected BigDecimal importe;
+
+				/**
+				 * Gets the value of the impuesto property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getImpuesto() {
+					return impuesto;
+				}
+
+				/**
+				 * Sets the value of the impuesto property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setImpuesto(String value) {
+					this.impuesto = value;
+				}
+
+				/**
+				 * Gets the value of the importe property.
+				 * 
+				 * @return possible object is {@link BigDecimal }
+				 * 
+				 */
+				public BigDecimal getImporte() {
+					return importe;
+				}
+
+				/**
+				 * Sets the value of the importe property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link BigDecimal }
+				 * 
+				 */
+				public void setImporte(BigDecimal value) {
+					this.importe = value;
+				}
+
+			}
+
+		}
+
+		/**
+		 * <p>
+		 * Java class for anonymous complex type.
+		 * 
+		 * <p>
+		 * The following schema fragment specifies the expected content contained within
+		 * this class.
+		 * 
+		 * <pre>
+		 * &lt;complexType&gt;
+		 *   &lt;complexContent&gt;
+		 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *       &lt;sequence&gt;
+		 *         &lt;element name="Traslado" maxOccurs="unbounded"&gt;
+		 *           &lt;complexType&gt;
+		 *             &lt;complexContent&gt;
+		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+		 *                 &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+		 *                 &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+		 *                 &lt;attribute name="TasaOCuota" use="required"&gt;
+		 *                   &lt;simpleType&gt;
+		 *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+		 *                       &lt;whiteSpace value="collapse"/&gt;
+		 *                       &lt;minInclusive value="0.000000"/&gt;
+		 *                       &lt;fractionDigits value="6"/&gt;
+		 *                     &lt;/restriction&gt;
+		 *                   &lt;/simpleType&gt;
+		 *                 &lt;/attribute&gt;
+		 *                 &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+		 *               &lt;/restriction&gt;
+		 *             &lt;/complexContent&gt;
+		 *           &lt;/complexType&gt;
+		 *         &lt;/element&gt;
+		 *       &lt;/sequence&gt;
+		 *     &lt;/restriction&gt;
+		 *   &lt;/complexContent&gt;
+		 * &lt;/complexType&gt;
+		 * </pre>
+		 * 
+		 * 
+		 */
+		@XmlAccessorType(XmlAccessType.FIELD)
+		@XmlType(name = "", propOrder = { "traslado" })
+		public static class Traslados {
+
+			@XmlElement(name = "Traslado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
+			protected List<Comprobante.Impuestos.Traslados.Traslado> traslado;
+
+			/**
+			 * Gets the value of the traslado property.
+			 * 
+			 * <p>
+			 * This accessor method returns a reference to the live list, not a snapshot.
+			 * Therefore any modification you make to the returned list will be present
+			 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+			 * for the traslado property.
+			 * 
+			 * <p>
+			 * For example, to add a new item, do as follows:
+			 * 
+			 * <pre>
+			 * getTraslado().add(newItem);
+			 * </pre>
+			 * 
+			 * 
+			 * <p>
+			 * Objects of the following type(s) are allowed in the list
+			 * {@link Comprobante.Impuestos.Traslados.Traslado }
+			 * 
+			 * 
+			 */
+			public List<Comprobante.Impuestos.Traslados.Traslado> getTraslado() {
+				if (traslado == null) {
+					traslado = new ArrayList<Comprobante.Impuestos.Traslados.Traslado>();
+				}
+				return this.traslado;
+			}
+
+			/**
+			 * <p>
+			 * Java class for anonymous complex type.
+			 * 
+			 * <p>
+			 * The following schema fragment specifies the expected content contained within
+			 * this class.
+			 * 
+			 * <pre>
+			 * &lt;complexType&gt;
+			 *   &lt;complexContent&gt;
+			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+			 *       &lt;attribute name="Impuesto" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Impuesto" /&gt;
+			 *       &lt;attribute name="TipoFactor" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoFactor" /&gt;
+			 *       &lt;attribute name="TasaOCuota" use="required"&gt;
+			 *         &lt;simpleType&gt;
+			 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal"&gt;
+			 *             &lt;whiteSpace value="collapse"/&gt;
+			 *             &lt;minInclusive value="0.000000"/&gt;
+			 *             &lt;fractionDigits value="6"/&gt;
+			 *           &lt;/restriction&gt;
+			 *         &lt;/simpleType&gt;
+			 *       &lt;/attribute&gt;
+			 *       &lt;attribute name="Importe" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_Importe" /&gt;
+			 *     &lt;/restriction&gt;
+			 *   &lt;/complexContent&gt;
+			 * &lt;/complexType&gt;
+			 * </pre>
+			 * 
+			 * 
+			 */
+			@XmlAccessorType(XmlAccessType.FIELD)
+			@XmlType(name = "")
+			public static class Traslado {
+
+				@XmlAttribute(name = "Impuesto", required = true)
+				protected String impuesto;
+				@XmlAttribute(name = "TipoFactor", required = true)
+				protected CTipoFactor tipoFactor;
+				@XmlAttribute(name = "TasaOCuota", required = true)
+				protected BigDecimal tasaOCuota;
+				@XmlAttribute(name = "Importe", required = true)
+				protected BigDecimal importe;
+
+				/**
+				 * Gets the value of the impuesto property.
+				 * 
+				 * @return possible object is {@link String }
+				 * 
+				 */
+				public String getImpuesto() {
+					return impuesto;
+				}
+
+				/**
+				 * Sets the value of the impuesto property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link String }
+				 * 
+				 */
+				public void setImpuesto(String value) {
+					this.impuesto = value;
+				}
+
+				/**
+				 * Gets the value of the tipoFactor property.
+				 * 
+				 * @return possible object is {@link CTipoFactor }
+				 * 
+				 */
+				public CTipoFactor getTipoFactor() {
+					return tipoFactor;
+				}
+
+				/**
+				 * Sets the value of the tipoFactor property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link CTipoFactor }
+				 * 
+				 */
+				public void setTipoFactor(CTipoFactor value) {
+					this.tipoFactor = value;
+				}
+
+				/**
+				 * Gets the value of the tasaOCuota property.
+				 * 
+				 * @return possible object is {@link BigDecimal }
+				 * 
+				 */
+				public BigDecimal getTasaOCuota() {
+					return tasaOCuota;
+				}
+
+				/**
+				 * Sets the value of the tasaOCuota property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link BigDecimal }
+				 * 
+				 */
+				public void setTasaOCuota(BigDecimal value) {
+					this.tasaOCuota = value;
+				}
+
+				/**
+				 * Gets the value of the importe property.
+				 * 
+				 * @return possible object is {@link BigDecimal }
+				 * 
+				 */
+				public BigDecimal getImporte() {
+					return importe;
+				}
+
+				/**
+				 * Sets the value of the importe property.
+				 * 
+				 * @param value
+				 *            allowed object is {@link BigDecimal }
+				 * 
+				 */
+				public void setImporte(BigDecimal value) {
+					this.importe = value;
+				}
+
+			}
+
+		}
+
+	}
+
+	/**
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within
+	 * this class.
+	 * 
+	 * <pre>
+	 * &lt;complexType&gt;
+	 *   &lt;complexContent&gt;
+	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+	 *       &lt;attribute name="Rfc" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_RFC" /&gt;
+	 *       &lt;attribute name="Nombre"&gt;
+	 *         &lt;simpleType&gt;
+	 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *             &lt;minLength value="1"/&gt;
+	 *             &lt;maxLength value="254"/&gt;
+	 *             &lt;whiteSpace value="collapse"/&gt;
+	 *             &lt;pattern value="[^|]{1,254}"/&gt;
+	 *           &lt;/restriction&gt;
+	 *         &lt;/simpleType&gt;
+	 *       &lt;/attribute&gt;
+	 *       &lt;attribute name="ResidenciaFiscal" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_Pais" /&gt;
+	 *       &lt;attribute name="NumRegIdTrib"&gt;
+	 *         &lt;simpleType&gt;
+	 *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+	 *             &lt;minLength value="1"/&gt;
+	 *             &lt;maxLength value="40"/&gt;
+	 *             &lt;whiteSpace value="collapse"/&gt;
+	 *           &lt;/restriction&gt;
+	 *         &lt;/simpleType&gt;
+	 *       &lt;/attribute&gt;
+	 *       &lt;attribute name="UsoCFDI" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_UsoCFDI" /&gt;
+	 *     &lt;/restriction&gt;
+	 *   &lt;/complexContent&gt;
+	 * &lt;/complexType&gt;
+	 * </pre>
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = "")
+	public static class Receptor {
+
+		@XmlAttribute(name = "Rfc", required = true)
+		protected String rfc;
+		@XmlAttribute(name = "Nombre")
+		protected String nombre;
+		@XmlAttribute(name = "ResidenciaFiscal")
+		protected CPais residenciaFiscal;
+		@XmlAttribute(name = "NumRegIdTrib")
+		protected String numRegIdTrib;
+		@XmlAttribute(name = "UsoCFDI", required = true)
+		protected CUsoCFDI usoCFDI;
+
+		/**
+		 * Gets the value of the rfc property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public String getRfc() {
+			return rfc;
+		}
+
+		/**
+		 * Sets the value of the rfc property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setRfc(String value) {
+			this.rfc = value;
+		}
+
+		/**
+		 * Gets the value of the nombre property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public String getNombre() {
+			return nombre;
+		}
+
+		/**
+		 * Sets the value of the nombre property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setNombre(String value) {
+			this.nombre = value;
+		}
+
+		/**
+		 * Gets the value of the residenciaFiscal property.
+		 * 
+		 * @return possible object is {@link CPais }
+		 * 
+		 */
+		public CPais getResidenciaFiscal() {
+			return residenciaFiscal;
+		}
+
+		/**
+		 * Sets the value of the residenciaFiscal property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link CPais }
+		 * 
+		 */
+		public void setResidenciaFiscal(CPais value) {
+			this.residenciaFiscal = value;
+		}
+
+		/**
+		 * Gets the value of the numRegIdTrib property.
+		 * 
+		 * @return possible object is {@link String }
+		 * 
+		 */
+		public String getNumRegIdTrib() {
+			return numRegIdTrib;
+		}
+
+		/**
+		 * Sets the value of the numRegIdTrib property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link String }
+		 * 
+		 */
+		public void setNumRegIdTrib(String value) {
+			this.numRegIdTrib = value;
+		}
+
+		/**
+		 * Gets the value of the usoCFDI property.
+		 * 
+		 * @return possible object is {@link CUsoCFDI }
+		 * 
+		 */
+		public CUsoCFDI getUsoCFDI() {
+			return usoCFDI;
+		}
+
+		/**
+		 * Sets the value of the usoCFDI property.
+		 * 
+		 * @param value
+		 *            allowed object is {@link CUsoCFDI }
+		 * 
+		 */
+		public void setUsoCFDI(CUsoCFDI value) {
+			this.usoCFDI = value;
+		}
+
+	}
+
+	@Override
+	public String toString() {
+
+		return "CFDI: [version:" + version + ", serie:" + serie + ", folio:" + folio + ", fecha:" + fecha + ", sello:"
+				+ sello + ", formaPago:" + formaPago + ", noCertificado:" + noCertificado + ", certificado:"
+				+ certificado + ", condicionesDePago:" + condicionesDePago + ", subTotal:" + subTotal + ", descuento:"
+				+ descuento + ", moneda: " + moneda.value() + ", tipoCambio:" + tipoCambio + ", total:" + total
+				+ ", tipoDeComprobante:" + tipoDeComprobante + ", metodoPago:" + metodoPago
+				+ ", lugarExpedicion:" + lugarExpedicion + ", confirmacion:" + confirmacion + "]\n" +
+				"Emisor: [RFC:" + this.emisor.getRfc() + ", nombre:" + this.emisor.getNombre() + ", regimenFiscal:" + this.emisor.getRegimenFiscal() + "]";
+	}
 
 }
