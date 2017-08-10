@@ -6,7 +6,7 @@
                 @XmlType(name = "c_Impuesto", namespace = "http://www.sat.gob.mx/sitio_internet/cfd/catalogos")
                 @XmlEnum
                 public enum CImpuesto {
-C01("01"),C02("02"),C03("03"),C04("04"),C05("05"),C06("06");
+C001("001"),C002("002"),C003("003"),C004("004"),C005("005"),C006("006");
 private final String text;
 
     private CImpuesto(final String text) {

@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -21,6 +22,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import mx.gob.sat.v33.Comprobante.Conceptos.Concepto;
+import mx.gob.sat.v33.Comprobante.Conceptos.Concepto.Impuestos.Retenciones;
+import mx.gob.sat.v33.Comprobante.Conceptos.Concepto.Impuestos.Retenciones.Retencion;
+import mx.gob.sat.v33.Comprobante.Conceptos.Concepto.Impuestos.Traslados;
+import mx.gob.sat.v33.Comprobante.Conceptos.Concepto.Impuestos.Traslados.Traslado;
+import mx.gob.sat.v33.adapter.CClaveUnidadAdapter;
 import mx.gob.sat.v33.adapter.DateAdapter;
 import mx.gob.sat.v33.adapter.RegimenFiscalAdapter;
 
@@ -2035,6 +2042,7 @@ public class Comprobante {
 			@XmlAttribute(name = "Cantidad", required = true)
 			protected BigDecimal cantidad;
 			@XmlAttribute(name = "ClaveUnidad", required = true)
+			@XmlJavaTypeAdapter(CClaveUnidadAdapter.class)
 			protected CClaveUnidad claveUnidad;
 			@XmlAttribute(name = "Unidad")
 			protected String unidad;
@@ -4337,14 +4345,58 @@ public class Comprobante {
 
 	@Override
 	public String toString() {
-
+		StringBuffer conceptosStr = new StringBuffer("");
+		
+		List<Concepto> conceptos = this.conceptos.getConcepto();
+		for (Concepto concepto : conceptos) {
+			conceptosStr.append("Concepto:[ Cantidad:").append(concepto.getCantidad());
+			conceptosStr.append(", ClaveProdServ:").append(concepto.getClaveProdServ());
+			conceptosStr.append(", ClaveUnidad:").append(concepto.getClaveUnidad());
+			conceptosStr.append(", Descripcion:").append(concepto.getDescripcion());
+			conceptosStr.append(", Descuento:").append(concepto.getDescuento());
+			conceptosStr.append(", Importe:").append(concepto.getImporte());
+			conceptosStr.append(", NoIdentificacion:").append(concepto.getNoIdentificacion());
+			conceptosStr.append(", Unidad:").append(concepto.getUnidad());
+			conceptosStr.append(", ValorUnitario:").append(concepto.getValorUnitario());
+			conceptosStr.append("\n\t");
+			
+			Retenciones retenciones = concepto.getImpuestos().getRetenciones();
+			Traslados traslados = concepto.getImpuestos().getTraslados();
+			
+			if (retenciones != null) {
+				for (Retencion retencion : retenciones.getRetencion()) {
+					conceptosStr.append("Impuesto Retencion: [ Base:").append(retencion.getBase());
+					conceptosStr.append(", Importe:").append(retencion.getImporte());
+					conceptosStr.append(", Impuesto:").append(retencion.getImpuesto());
+					conceptosStr.append(", TasaOCuota:").append(retencion.getTasaOCuota());
+					conceptosStr.append(", TipoFactor:").append(retencion.getTipoFactor());
+					conceptosStr.append("]\n\t");
+				}
+			} else if(traslados != null) {
+				for (Traslado traslado : traslados.getTraslado()) {
+					conceptosStr.append("Impuesto Traslado: [ Impuesto:").append(traslado.getImpuesto());
+					conceptosStr.append(", Base:").append(traslado.getBase());
+					conceptosStr.append(", Importe:").append(traslado.getImporte());
+					conceptosStr.append(", TasaOCuota:").append(traslado.getTasaOCuota());
+					conceptosStr.append(", TipoFactor:").append(traslado.getTipoFactor());
+					conceptosStr.append("]\n\t");
+				}
+			}
+			
+			conceptosStr.append("]");
+		}
+		
 		return "CFDI: [version:" + version + ", serie:" + serie + ", folio:" + folio + ", fecha:" + fecha + ", sello:"
 				+ sello + ", formaPago:" + formaPago + ", noCertificado:" + noCertificado + ", certificado:"
 				+ certificado + ", condicionesDePago:" + condicionesDePago + ", subTotal:" + subTotal + ", descuento:"
 				+ descuento + ", moneda: " + moneda.value() + ", tipoCambio:" + tipoCambio + ", total:" + total
-				+ ", tipoDeComprobante:" + tipoDeComprobante + ", metodoPago:" + metodoPago
-				+ ", lugarExpedicion:" + lugarExpedicion + ", confirmacion:" + confirmacion + "]\n" +
-				"Emisor: [RFC:" + this.emisor.getRfc() + ", nombre:" + this.emisor.getNombre() + ", regimenFiscal:" + this.emisor.getRegimenFiscal() + "]";
+				+ ", tipoDeComprobante:" + tipoDeComprobante + ", metodoPago:" + metodoPago + ", lugarExpedicion:"
+				+ lugarExpedicion + ", confirmacion:" + confirmacion + "]\n" + "Emisor: [RFC:" + this.emisor.getRfc()
+				+ ", nombre:" + this.emisor.getNombre() + ", regimenFiscal:" + this.emisor.getRegimenFiscal() + "]\n"
+				+ "Receptor[RFC:" + this.receptor.getRfc() + ", nombre:" + this.receptor.getNombre()
+				+ ", residenciaFiscal:" + this.receptor.getResidenciaFiscal().toString() + ", numRegIdTrib:"
+				+ this.receptor.getNumRegIdTrib() + ", usoCFDI:" + this.receptor.getUsoCFDI().value() + "]\n" +
+				conceptosStr.toString();
 	}
 
 }

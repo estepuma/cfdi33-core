@@ -26,6 +26,8 @@ public class CertificadoUtil {
 
 	private Logger logger = Logger.getLogger(CertificadoUtil.class);
 	
+	private static final String X_509 = "X.509";
+	
 	@Value("${cert.file.path}")
 	private String certFilePath;
 	
@@ -35,7 +37,7 @@ public class CertificadoUtil {
 	public String getNoCertificado() throws FileNotFoundException, CertificateException {
 		
 		InputStream is = new FileInputStream(certFilePath);
-		CertificateFactory cf = CertificateFactory.getInstance("X.509");
+		CertificateFactory cf = CertificateFactory.getInstance(X_509);
 		X509Certificate certificado=(X509Certificate)cf.generateCertificate(is);
 		byte[] byteArray= certificado.getSerialNumber().toByteArray();
         String noCertificado = new String(byteArray);
