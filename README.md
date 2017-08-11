@@ -17,7 +17,7 @@ SDK para generación de CFDI's version 3.3
 4. Ejecutar: mvn clean install
 
 # Notas
-- No es necesario ejecutar el script de python, sin embargo se deberán actualizar las variables private.key.file.string, cert.file.string y cert.no.certificado manualmente.
-- La aplicación contiene llaves de prueba, si se cambian las llaves las pruebas de junit fallarán, hay dos opciones:
-  - Omitir las pruebas: mvn clean install -Dmaven.test.skip=true
-  - Actualizar las clases ComprobanteTest.java y CertificadoUtilTest.java con los valores adecuados de sello, cadena original, número de certificado, certificado y llave privada.
+1. No es necesario ejecutar el script de python, sin embargo se deberán actualizar las variables private.key.file.string, cert.file.string y cert.no.certificado manualmente.
+2. La aplicación contiene llaves de prueba, si se cambian las llaves las pruebas de junit fallarán, hay dos opciones:
+  - Omitir las pruebas: "mvn clean install -Dmaven.test.skip=true"
+  - Actualizar las clases ComprobanteTest.java y CertificadoUtilTest.java con los valores adecuados de sello, cadena original, número de certificado, certificado y llave privada.
